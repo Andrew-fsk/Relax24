@@ -40,11 +40,12 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  font-family: "Open-Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  color: #363636;
+  color: #FFFFFF;
   width: 100vw;
   max-width: 100%;
+  background: linear-gradient(180deg, #000000 0%, #1A2871 47.92%, #460F47 100%);
 }
 body.fancybox-iosfix {
   position: relative !important;
@@ -54,6 +55,19 @@ body.fancybox-iosfix {
 }
 body .wrap {
   flex: 1 0 auto;
+}
+body:after {
+  content: "";
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70vh;
+  z-index: -1;
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-image: url("../images/bg.png");
 }
 
 ul, ol {
@@ -65,12 +79,12 @@ ul li, ol li {
   margin-left: 15px;
   font-size: 16px;
   line-height: 1.2;
-  color: #363636;
+  color: #FFFFFF;
 }
 
 a {
   text-decoration: underline;
-  color: #ff3636;
+  color: #FF0068;
 }
 a:hover {
   text-decoration: none;
@@ -80,23 +94,24 @@ a img {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Open-Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 100%;
   font-weight: normal;
-  color: #363636;
+  color: #FFFFFF;
 }
 
 h1, .h1 {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
   text-align: center;
   font-weight: 600;
-  font-size: 64px;
+  font-size: 42px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   h1, .h1 {
     margin-bottom: 50px;
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media (max-width: 767px) {
@@ -106,16 +121,17 @@ h1, .h1 {
   }
 }
 h2, .h2 {
-  margin-bottom: 35px;
+  margin-bottom: 55px;
+  text-transform: uppercase;
   text-align: center;
-  font-weight: 600;
-  font-size: 48px;
+  font-weight: 700;
+  font-size: 40px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   h2, .h2 {
-    margin-bottom: 35px;
-    font-size: 30px;
+    margin-bottom: 40px;
+    font-size: 26px;
   }
 }
 @media (max-width: 767px) {
@@ -125,10 +141,11 @@ h2, .h2 {
   }
 }
 h3, .h3 {
-  margin-bottom: 48px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
   text-align: center;
-  font-weight: 600;
-  font-size: 36px;
+  font-weight: 700;
+  font-size: 24px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -144,10 +161,11 @@ h3, .h3 {
   }
 }
 h4, .h4 {
-  margin-bottom: 46px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
   text-align: center;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -163,10 +181,11 @@ h4, .h4 {
   }
 }
 h5, .h5 {
-  margin-bottom: 44px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
   text-align: center;
-  font-weight: 600;
-  font-size: 26px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -181,10 +200,11 @@ h5, .h5 {
   }
 }
 h6, .h6 {
-  margin-bottom: 42px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
   text-align: center;
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 @media (max-width: 767px) {
@@ -196,14 +216,14 @@ p {
   margin-bottom: 24px;
   font-size: 16px;
   line-height: 1.5;
-  color: #363636;
+  color: #FFFFFF;
 }
 
 table {
   width: 100%;
   margin-bottom: 40px;
   border-collapse: collapse;
-  font-family: "Open-Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 table th, table td {
   padding: 15px 10px;
@@ -222,7 +242,7 @@ table th {
 }
 
 input[type=submit] {
-  font-family: "Open-Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   outline: none;
   cursor: pointer;
   line-height: 1.3;
@@ -231,7 +251,7 @@ input[type=submit] {
 }
 
 textarea, input, select {
-  font-family: "Open-Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 button {
@@ -280,6 +300,11 @@ button {
   float: none;
   max-width: inherit;
   margin: 0;
+}
+
+h1, .h1 {
+  -webkit-text-stroke: 1px #FF0068;
+  text-shadow: 0 2px 7px #FF0068;
 }
 
 .attention {

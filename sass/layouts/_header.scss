@@ -1,0 +1,264 @@
+header {
+  background: #000000;
+  overflow: hidden;
+  @include breakpoint(xs){
+    z-index: 112;
+    position: relative;
+  }
+  .container {
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    left: -10%;
+    top: 0;
+    @include breakpoint(xs) {
+      position: initial;
+      left: initial;
+      margin-left: -15%;
+      max-width: 70%;
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .top-line {
+    position: relative;
+    z-index: 1;
+    padding: 50px 0;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(flex-end);
+    @include breakpoint(xs) {
+      display: none;
+    }
+  }
+
+  .bottom-line {
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    @include flexbox;
+    @include align-items(center);
+    @include breakpoint(xs) {
+      display: none;
+    }
+  }
+
+
+
+  .phone {
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-left: 30px;
+    padding-left: 25px;
+    position: relative;
+    text-decoration: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(50% - 7px);
+      width: 14px;
+      height: 14px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../images/phone.svg");
+    }
+
+    @include breakpoint(xs) {
+      display: none;
+    }
+  }
+
+  .address {
+    @extend .phone;
+    font-size: 15px;
+    margin-left: 0;
+
+    &:after {
+      background-image: url("../images/address.svg");
+    }
+
+    @include breakpoint(xs) {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  @include flex-grow(1);
+  margin-bottom: 0;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+  @include breakpoint(xs){
+    @include flex-direction(column);
+    @include flex-grow(initial);
+    @include align-items(flex-start);
+
+  }
+}
+
+.item-level-0 {
+  list-style: none;
+  margin: 0;
+  @include breakpoint(xs){
+    margin-bottom: 20px;
+  }
+}
+
+.link-level-0 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 27px;
+  font-family: $font-family-alt;
+  text-decoration: none;
+  transition: all .2s;
+
+  &.active, &:hover {
+    color: $color1;
+    text-shadow: 5px 1px 31px #0E22BA;
+  }
+}
+
+.lang-switch {
+  background: #191A1F;
+  border: 1px solid #000000;
+  box-shadow: 5px 1px 31px #0E22BA;
+  border-radius: 13px;
+  margin-left: 85px;
+  @include flexbox;
+
+  .lang-item {
+    display: block;
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 50%;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-family: $font-family-alt;
+    color: #FFFFFF;
+
+    &.active {
+      background: linear-gradient(270deg, #FF0068 0%, #750787 97.37%);
+    }
+  }
+}
+
+.burger {
+  display: none;
+  position: relative;
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 110;
+
+  div,
+  div:before,
+  div:after {
+    left: 0;
+    background: $color1;
+    position: absolute;
+    height: 2px;
+    width: 35px;
+    transition: all .5s;
+  }
+
+  div:first-child {
+    top: 6px;
+  }
+
+  div:nth-child(2) {
+    top: 15px;
+  }
+
+  div:nth-child(3) {
+    top: 24px;
+  }
+
+  @include breakpoint(xs) {
+    display: inline-block;
+  }
+
+  &.menu-open {
+    div:first-child {
+      top: 16px;
+      transform: rotate(45deg);
+      transition: top .15s, transform .15s .15s;
+    }
+
+    div:nth-child(2),
+    div:nth-child(3) {
+      top: 16px;
+      transform: rotate(-45deg);
+      transition: top .15s, transform .15s .15s;
+    }
+  }
+}
+
+.mob-line {
+  @include breakpoint(xs) {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+  }
+}
+
+.mobile-menu-wrap{
+  display: none;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  overflow-y: auto;
+  background-color: #000000;
+  &.popup-slider{
+    display: block;
+  }
+}
+
+.mobile-menu{
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  .phone {
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    position: relative;
+    text-decoration: none;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(50% - 12.5px);
+      width: 25px;
+      height: 25px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../images/phone.svg");
+    }
+  }
+
+  .address {
+    @extend .phone;
+    &:after {
+      background-image: url("../images/address.svg");
+    }
+  }
+}
