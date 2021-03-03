@@ -22,7 +22,7 @@
       <envs />
     </TaskOptions>
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="$FileName$ --pretty --out $ProjectFileDir$\templates" />
+      <option name="arguments" value="$FileName$ --pretty --out $ProjectFileDir$\docs" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
       <option name="exitCodeBehavior" value="NEVER" />
