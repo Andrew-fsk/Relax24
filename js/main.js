@@ -13,6 +13,54 @@ $(document).ready(function () {
             document.activeElement.blur();
         }
     });
+
+    $('.banner').slick({
+        infinite: true,
+        swipeToSlide: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    $('.model-slider').slick({
+        infinite: true,
+        swipeToSlide: true,
+        autoplay: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('.program-slider').slick({
+        infinite: true,
+        swipeToSlide: true,
+        autoplay: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    let movementStrength = 25;
+    let height = movementStrength / $(window).height();
+    let width = movementStrength / $(window).width();
+    $(".girl-choose").mousemove(function(e){
+        let pageX = e.pageX - ($(window).width() / 2);
+        let pageY = e.pageY - ($(window).height() / 2);
+        let newvalueX = width * pageX * -1;
+        let newvalueY = height * pageY * -1;
+        $('.girl-choose .girl').css("background-position", newvalueX+"px     "+newvalueY+"px");
+    });
 })
 
 function setPopup(){

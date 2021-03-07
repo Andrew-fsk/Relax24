@@ -18,13 +18,15 @@ body{padding: 0;}
 @import "reset";
 //@import "libs/popup-slide";
 //@import "libs/fancybox3";
-//@import "libs/slick-theme";
+@import "libs/slick-theme";
 //@import "libs/select2";
 //@import "libs/scrollbar";
 @import "libs/popup-slide";
 
 //components
 //@import "components/to-top";
+@import "components/button";
+@import "components/object-fit";
 
 //widgets
 //@import "widgets/pagination";
@@ -33,4 +35,7 @@ body{padding: 0;}
 
 //layouts
 @import "layouts/header";
+@import "layouts/banner";
+@import "layouts/models";
+@import "layouts/main-page";
 @import "layouts/footer";

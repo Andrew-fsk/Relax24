@@ -1,0 +1,56 @@
+.button{
+  cursor: pointer;
+  text-decoration: none;
+  input{
+    display: none;
+  }
+  background-image: url("../images/svg/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 20px;
+  background-position: 89% 50%;
+  font-family: $font-family-alt;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #282E44;
+  padding: 15px;
+  padding-right: 35px;
+  border-radius: 50px;
+  width: 215px;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    transition: all .2s;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 50px;
+    background-image: url("../images/button.png");
+    background-position: center;
+    mix-blend-mode: color-dodge;
+    transition: all .2s;
+    opacity: 0;
+  }
+  &:hover{
+    &:before{
+      opacity: 1;
+    }
+  }
+}

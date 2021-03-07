@@ -1,0 +1,162 @@
+.banner {
+  position: relative;
+  height: calc(100vh - 198px);
+  @include breakpoint(sm-down){
+    height: initial;
+  }
+  @include breakpoint(xs){
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    height: 100%;
+    pointer-events: none;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/banner.png");
+    @include breakpoint(mxs){
+      width: 50%;
+      background-size: initial;
+      right: -15px;
+    }
+  }
+
+  &:before{
+    position: absolute;
+    content: '';
+    pointer-events: none;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../images/banner1.png");
+    width: 50%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    @include breakpoint(mxs){
+      content: initial;
+    }
+  }
+
+  .slick-track, .slick-list {
+    height: 100%;
+  }
+
+  .slick-dots{
+    left: 50%;
+    bottom: 30px;
+    @include transform(translateX(-50%));
+    @include flexbox;
+    @include align-items(center);
+    z-index: 1;
+    margin: 0;
+    li{
+      list-style: none;
+      margin: 0 3px;
+      button{
+        opacity: 1;
+        font-size: 0;
+        cursor: pointer;
+        border: none;
+        width: 30px;
+        height: 8px;
+        cursor: pointer;
+        background-color: #E0E0E0;
+        border-radius: 4px;
+        transition: all .2s;
+      }
+      &.slick-active{
+        button{
+          width: 60px;
+          background: linear-gradient(270deg, #FF0068 0%, #2001BA 97.37%);
+          box-shadow: 1px 1px 17px #FC3F83;
+        }
+      }
+    }
+  }
+}
+
+.banner-title{
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #FF0068;
+  text-shadow: 0 2px 7px #FF0068;
+  font-weight: bold;
+  font-family: $font-family-alt;
+  margin-bottom: 5px;
+  @include breakpoint(sm-down){
+    font-size: 30px;
+  }
+  @include breakpoint(xs){
+    font-size: 26px;
+    max-width: 70%;
+  }
+  span{
+    font-size: 64px;
+    @include breakpoint(sm-down){
+      font-size: 50px;
+    }
+    @include breakpoint(xs){
+      font-size: 30px;
+    }
+    span{
+      color: $color1;
+    }
+  }
+}
+
+.banner-wrap{
+  background-color: #000000;
+}
+
+.banner-text{
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-bottom: 75px;
+  @include breakpoint(sm-down){
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: initial;
+    position: relative;
+    z-index: 2;
+  }
+  @include breakpoint(xs){
+    font-size: 16px;
+    max-width: 80%;
+  }
+}
+
+.banner-buttons{
+  @include flexbox;
+  @include align-items(center);
+  @include breakpoint(sm-down){
+    @include flex-direction(column);
+    @include align-items(flex-start);
+  }
+  .button{
+    &:first-of-type{
+      margin-right: 25px;
+      @include breakpoint(xs){
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.banner-slide{
+  padding-top: 75px;
+  overflow: hidden;
+  @include breakpoint(sm-down){
+    padding: 150px 0;
+  }
+}

@@ -1,0 +1,340 @@
+.girl-choose-wrap {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include breakpoint(xs) {
+    padding-top: 0;
+  }
+}
+
+.girl-choose {
+  border-radius: 8px;
+  height: 740px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+  padding-left: 95px;
+  @include breakpoint(xs) {
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-right: 15px;
+  }
+
+  .h1 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .choose-row {
+    position: relative;
+    z-index: 10;
+    font-family: $font-family-alt;
+    @include flexbox;
+    @include align-items(center);
+    @include breakpoint(xs) {
+      @include flex-direction(column);
+    }
+
+    .choose-text {
+      font-size: 24px;
+      font-weight: 600;
+      @include breakpoint(xs) {
+        font-size: 16px;
+      }
+
+      &:first-of-type {
+        margin-right: 30px;
+        max-width: 350px;
+        @include breakpoint(xs) {
+          max-width: 100%;
+          margin-right: 0;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+      }
+
+      span {
+        font-size: 30px;
+        text-transform: uppercase;
+        @include breakpoint(xs) {
+          font-size: 22px;
+        }
+      }
+
+      &.small {
+        font-family: $font-family;
+        font-weight: normal;
+        font-size: 18px;
+        max-width: 200px;
+        @include breakpoint(xs) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/choose-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include user-select(none);
+  }
+
+  .girl {
+    position: absolute;
+    left: -10%;
+    bottom: -10%;
+    width: 120%;
+    height: 120%;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-image: url('../images/choose.png');
+  }
+
+  .bottom-button-wrap {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.program-grid {
+  @include flexbox;
+  margin: 0 -15px;
+  @include flex-wrap(wrap);
+  @include breakpoint(sm-down){
+    display: none;
+  }
+  .program-image {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    width: 40%;
+    display: block;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, #FF0068 0%, #750787 97.37%);
+      opacity: 0.3;
+    }
+  }
+
+  .program-info {
+    width: 60%;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    @include align-items(flex-start);
+    padding: 20px 20px 20px 15px;
+
+    h4 {
+      text-align: left;
+      height: 40px;
+    }
+
+    .line {
+      width: 100%;
+      margin-bottom: 4px;
+      @include flexbox;
+    }
+
+    .item {
+      width: 33.33%;
+    }
+    ul{
+      font-size: 14px;
+      padding-top: 10px;
+      li{
+        list-style: none;
+        position: relative;
+        padding-left: 20px;
+        margin-left: 0;
+        margin-bottom: 5px;
+        &:after{
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 4px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $color1;
+        }
+      }
+    }
+  }
+
+  .price {
+    font-family: $font-family-alt;
+    font-weight: 600;
+    font-size: 22px;
+    color: $color1;
+
+    span {
+      color: #ffffff;
+      font-size: 14px;
+    }
+  }
+
+  .time {
+    font-family: $font-family-alt;
+    font-weight: 600;
+    font-size: 22px;
+    color: #8AE3FF;
+
+    span {
+      color: #ffffff;
+      font-size: 14px;
+    }
+  }
+
+  .program-item {
+    width: calc(50% - 30px);
+    margin: 0 15px 40px 15px;
+    @include flexbox;
+    overflow: hidden;
+    background: #191A1F;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: all .2s;
+
+    &:hover {
+      border: 1px solid #FB0169;
+      box-shadow: 0px 2px 7px #FF0068;
+    }
+  }
+}
+
+.programs-wrap {
+  padding: 30px 0;
+}
+
+.program-slider{
+  display: none;
+  margin: 0 -15px;
+  @include breakpoint(sm-down){
+    display: block;
+  }
+  .program-item{
+    margin: 0 15px;
+    @include flexbox;
+    overflow: hidden;
+    background: #191A1F;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: all .2s;
+    @include flex-wrap(wrap);
+    &:hover {
+      border: 1px solid #FB0169;
+      box-shadow: 0px 2px 7px #FF0068;
+    }
+  }
+  .program-image {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    width: 40%;
+    display: block;
+    @include breakpoint(smxs){
+      height: 300px;
+      width: 100%;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, #FF0068 0%, #750787 97.37%);
+      opacity: 0.3;
+    }
+  }
+
+  .program-info {
+    width: 60%;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    @include align-items(flex-start);
+    padding: 20px 20px 20px 15px;
+    @include breakpoint(smxs){
+      width: 100%;
+      .button{
+        margin: auto;
+      }
+    }
+    h4 {
+      text-align: left;
+      height: 40px;
+    }
+
+    .line {
+      width: 100%;
+      margin-bottom: 4px;
+      @include flexbox;
+    }
+
+    .item {
+      width: 33.33%;
+    }
+    ul{
+      font-size: 14px;
+      padding-top: 10px;
+      li{
+        list-style: none;
+        position: relative;
+        padding-left: 20px;
+        margin-left: 0;
+        margin-bottom: 5px;
+        &:after{
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 4px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $color1;
+        }
+      }
+    }
+  }
+
+  .price {
+    font-family: $font-family-alt;
+    font-weight: 600;
+    font-size: 22px;
+    color: $color1;
+
+    span {
+      color: #ffffff;
+      font-size: 14px;
+    }
+  }
+
+  .time {
+    font-family: $font-family-alt;
+    font-weight: 600;
+    font-size: 22px;
+    color: #8AE3FF;
+
+    span {
+      color: #ffffff;
+      font-size: 14px;
+    }
+  }
+}

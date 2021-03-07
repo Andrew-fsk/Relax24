@@ -1,4 +1,161 @@
 extends base
 
 block content
-    .container test page
+    .banner-wrap
+        .container
+            .banner
+                .banner-slide
+                    .banner-title <span><span>VIP</span>-комната</span><br> с личным джакузи и хамам в подарок
+                    .banner-text Компаниям от трёх человек в течении всей программы
+                    .banner-buttons
+                        a(href='#').button Записаться
+                        a(href='#').button Подобрать девушку
+                .banner-slide
+                    .banner-title <span>VIP-комната</span><br> с личным джакузи и хамам в подарок
+                    .banner-text Компаниям от трёх человек в течении всей программы
+                    .banner-buttons
+                        a(href='#').button Записаться
+                        a(href='#').button Подобрать девушку
+                .banner-slide
+                    .banner-title <span>VIP-комната</span><br> с личным джакузи и хамам в подарок
+                    .banner-text Компаниям от трёх человек в течении всей программы
+                    .banner-buttons
+                        a(href='#').button Записаться
+                        a(href='#').button Подобрать девушку
+    .master-on-main
+        .container
+            h1 мастера
+            .model-grid
+                each val, key in Array(8)
+                    if(key !== 0)
+                        .model-item
+                            .model-links
+                                a(href='#').top
+                                a(href='#').new
+                                a(href='#').play
+                            img(src="../images/watermark.png").watermark
+                            .address пр-т. Хусаина Ямашева, 17
+                            a(href='#').model-image.object-fit
+                                img(src='../images/models/model' + key + '.jpg')
+                            a(href='#').model-info
+                                .model-text
+                                    h5  Ангелина, 24
+                                    .prop-list
+                                        .prop Рост: <span>170</span>
+                                        .prop Вес: <span>51</span>
+                                        .prop Грудь: <span>2</span>
+                                img.model-icon(src='../images/model-icon.png')
+                    else
+                        .model-item.no-image
+                            .model-links
+                                a(href='#').top
+                                a(href='#').new
+                                a(href='#').play
+                            .address.red пр-т. Хусаина Ямашева, 17
+                            a(href='#').model-image.object-fit
+                                img(src='../images/svg/no-image.svg')
+                            a(href='#').model-info
+                                .model-text
+                                    h5  Ангелина, 24
+                                    .prop-list
+                                        .prop Рост: <span>170</span>
+                                        .prop Вес: <span>51</span>
+                                        .prop Грудь: <span>2</span>
+                                img.model-icon(src='../images/model-icon.png')
+            .model-slider
+                each val, key in Array(8)
+                    if(key !== 0)
+                        .model-item
+                            .model-links
+                                a(href='#').top
+                                a(href='#').new
+                                a(href='#').play
+                            img(src="../images/watermark.png").watermark
+                            .address пр-т. Хусаина Ямашева, 17
+                            a(href='#').model-image.object-fit
+                                img(src='../images/models/model' + key + '.jpg')
+                            a(href='#').model-info
+                                .model-text
+                                    h5  Ангелина, 24
+                                    .prop-list
+                                        .prop Рост: <span>170</span>
+                                        .prop Вес: <span>51</span>
+                                        .prop Грудь: <span>2</span>
+                                img.model-icon(src='../images/model-icon.png')
+                    else
+                        .model-item.no-image
+                            .model-links
+                                a(href='#').top
+                                a(href='#').new
+                                a(href='#').play
+                            .address.red пр-т. Хусаина Ямашева, 17
+                            a(href='#').model-image.object-fit
+                                img(src='../images/svg/no-image.svg')
+                            a(href='#').model-info
+                                .model-text
+                                    h5  Ангелина, 24
+                                    .prop-list
+                                        .prop Рост: <span>170</span>
+                                        .prop Вес: <span>51</span>
+                                        .prop Грудь: <span>2</span>
+                                img.model-icon(src='../images/model-icon.png')
+            .bottom-button-wrap.ac-jc
+                a(href='#').button Смотреть всех
+    .container.girl-choose-wrap
+        .girl-choose
+            .h1 подобрать девушку
+            .choose-row
+                .choose-text <span>Не нашли мастера?</span> <br> Оставьте заявку, и мы подберем вам по параметрам
+                .choose-text.small Все фото принадлежат нашим девочкам, наслаждайтесь ;)
+            .bottom-button-wrap.ac-jc
+                a(href='#').button Все Программы
+            .girl
+    .programs-wrap
+        .container
+            .h1 Программы
+            .program-grid
+                each val, key in ['Прикосновения к прекрасному','Тайский боди','Двойное удовольствие','Искушение','Сладкий персик','Королевство сиам']
+                    .program-item
+                        a(href="#").program-image.object-fit
+                            img(src='../images/programs/program' + key + '.jpg')
+                        .program-info
+                            h4 #{val}
+                            .line.price
+                                .item 12 500 <span>₽</span>
+                                .item 16 500 <span>₽</span>
+                                .item 18 500 <span>₽</span>
+                            .line.time
+                                .item 60 <span>минут</span>
+                                .item 90 <span>минут</span>
+                                .item 120 <span>минут</span>
+                            ul
+                                li Классический,
+                                li эротический массаж,
+                                li прикосновения,
+                                li совместный душ
+                            a(href='#').button Подробнее
+            .program-slider
+                each val, key in ['Прикосновения к прекрасному','Тайский боди','Двойное удовольствие','Искушение','Сладкий персик','Королевство сиам']
+                    .program-item
+                        a(href="#").program-image.object-fit
+                            img(src='../images/programs/program' + key + '.jpg')
+                        .program-info
+                            h4 #{val}
+                            .line.price
+                                .item 12 500 <span>₽</span>
+                                .item 16 500 <span>₽</span>
+                                .item 18 500 <span>₽</span>
+                            .line.time
+                                .item 60 <span>минут</span>
+                                .item 90 <span>минут</span>
+                                .item 120 <span>минут</span>
+                            ul
+                                li Классический,
+                                li эротический массаж,
+                                li прикосновения,
+                                li совместный душ
+                            a(href='#').button Подробнее
+            .bottom-button-wrap.ac-jc
+                a(href='#').button Все Программы
+
+
