@@ -1,0 +1,31 @@
+.validation-field{
+  margin-bottom: 15px;
+  &.error{
+    input{
+      border: 1px solid #ff0000;
+    }
+  }
+  &.active{
+    input{
+      border: 1px solid #FB0169;
+    }
+  }
+  input{
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    width: 260px;
+    max-width: 100%;
+    padding: 10px;
+    &:focus{
+      border: 1px solid #FB0169;
+    }
+  }
+  .placeholder{
+    font-family: $font-family-alt;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}

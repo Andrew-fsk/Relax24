@@ -51,6 +51,16 @@ $(document).ready(function () {
         slidesToScroll: 1,
     });
 
+    $('.interier-slider').slick({
+        infinite: true,
+        swipeToSlide: true,
+        autoplay: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
     let movementStrength = 25;
     let height = movementStrength / $(window).height();
     let width = movementStrength / $(window).width();
@@ -60,6 +70,17 @@ $(document).ready(function () {
         let newvalueX = width * pageX * -1;
         let newvalueY = height * pageY * -1;
         $('.girl-choose .girl').css("background-position", newvalueX+"px     "+newvalueY+"px");
+    });
+
+    $('.validation-field input[type="text"],.validation-field textarea, .validation-field input[type="password"]').on("blur", function () {
+        $(this).val() ? $(this).parent().addClass('active') : $(this).parent().removeClass('active');
+    }).each(function () {
+        $(this).val() ? $(this).parent().addClass('active') : $(this).parent().removeClass('active');
+        savedPassFix($(this));
+        if($(this).attr("placeholder") && $(this).attr("placeholder").indexOf('*') != -1){
+            var placeholder = $(this).attr("placeholder");
+            $(this).next(".placeholder").text(placeholder);
+        }
     });
 })
 
