@@ -76,11 +76,6 @@ $(document).ready(function () {
         $(this).val() ? $(this).parent().addClass('active') : $(this).parent().removeClass('active');
     }).each(function () {
         $(this).val() ? $(this).parent().addClass('active') : $(this).parent().removeClass('active');
-        savedPassFix($(this));
-        if($(this).attr("placeholder") && $(this).attr("placeholder").indexOf('*') != -1){
-            var placeholder = $(this).attr("placeholder");
-            $(this).next(".placeholder").text(placeholder);
-        }
     });
 })
 

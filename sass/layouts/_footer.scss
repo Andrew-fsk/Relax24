@@ -1,0 +1,220 @@
+footer{
+  background-color: #000000;
+  position: relative;
+  padding-bottom: 45px;
+  overflow: hidden;
+  .phone{
+    font-size: 18px;
+    position: relative;
+    z-index: 2;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    text-decoration: none;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(50% - 12.5px);
+      width: 25px;
+      height: 25px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../images/phone.svg");
+    }
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 35%;
+    pointer-events: none;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/footer-r.png");
+    @include breakpoint(xs){
+      content: initial;
+    }
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 35%;
+    pointer-events: none;
+    background-position: left;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    z-index: 2;  
+    background-image: url("../images/footer-l.png");
+  }
+}
+
+.footer-top{
+  padding-top: 125px;
+  padding-bottom: 45px;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+  position: relative;
+  @include align-items(center);
+  @include breakpoint(xs){
+    padding-top: 0;
+    padding-bottom: 0;
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+  .logo{
+    z-index: 2;
+    position: absolute;
+    left: -15%;
+    top: 0;
+    @include breakpoint(sm-down){
+      left: -23%;
+      top: -30%;
+    }
+    @include breakpoint(xs){
+      position: initial;
+      img{
+        max-height: 150px;
+      }
+    }
+  }
+}
+
+.payments-wrap{
+  position: relative;
+  z-index: 2;
+  @include breakpoint(xs){
+    margin-bottom: 20px;
+  }
+  .title{
+    font-size: 15px;
+    margin-bottom: 5px;
+    @include breakpoint(xs){
+      text-align: center;
+    }
+  }
+  .payments{
+    img{
+      margin-right: 15px;
+    }
+  }
+}
+
+.social-list{
+  @include flexbox;
+  position: relative;
+  z-index: 5;
+  a{
+    transition: all .2s;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 33px;
+    height: 33px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    &.vk{
+      background-image: url("../images/svg/vk.svg");
+    }
+    &.tg{
+      background-image: url("../images/svg/tg.svg");
+    }
+    &.yt{
+      background-image: url("../images/svg/yt.svg");
+    }
+    &.vb{
+      background-image: url("../images/svg/vb.svg");
+    }
+    &:hover{
+      box-shadow: 5px 1px 31px #FF0068;
+    }
+  }
+}
+
+.footer-fix{
+  width: 172px;
+  @include breakpoint(sm-down){
+    display: none;
+  }
+}
+
+.footer-middle{
+  padding-bottom: 115px;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+  @include breakpoint(xs){
+    padding-bottom: 20px;
+    @include flex-direction(column-reverse);
+    @include align-items(center);
+  }
+}
+
+.footer-nav{
+  position: relative;
+  z-index: 4;
+  @include breakpoint(sm-down){
+    margin-left: auto;
+  }
+  @include breakpoint(xs){
+    margin-left: initial;
+    margin-bottom: 20px;
+  }
+  @include breakpoint(smxs){
+    @include flex-direction(column);
+  }
+  @include flexbox;
+  .item-level-0{
+    margin: 0 22px;
+    @include breakpoint(sm-down){
+      margin: 0 10px;
+    }
+    @include breakpoint(smxs){
+      margin: 0 0 10px 0;
+      @include flexbox;
+      @include justify-content(center);
+    }
+    &:first-of-type{
+      margin-left: 0;
+    }
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+}
+
+.footer-bottom{
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+  color: #ffffff;
+  font-size: 14px;
+  a{
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    &.politic-link{
+      line-height: 1;
+      border-bottom: 1px solid #ffffff;
+      margin-bottom: 10px;
+    }
+    &.public-link{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 1775px) {
+  footer:before{
+    content: initial;
+  }
+}

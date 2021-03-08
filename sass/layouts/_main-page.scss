@@ -520,14 +520,17 @@
   background: #191A20;
   border-radius: 8px;
   padding: 25px 35px 95px 35px;
+  margin-bottom: -30px;
+  position: relative;
+  z-index: 6;
   overflow: hidden;
   @include breakpoint(md-down){
+    margin-bottom: 30px;
     padding: 25px 10px 95px 10px;
   }
   @include breakpoint(sm-down){
     padding: 25px 10px;
   }
-  position: relative;
   &:after{
     content: '';
     position: absolute;
