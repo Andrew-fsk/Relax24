@@ -24,11 +24,16 @@ table {
     letter-spacing: -0.09px;
   }
 }
+html {
+  height: 100%;
+}
+
 html, body {
   -webkit-text-size-adjust: 100%;
 }
 
 body {
+  min-height: 100%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -44,7 +49,9 @@ body {
   color: #FFFFFF;
   width: 100vw;
   max-width: 100%;
-  background: linear-gradient(180deg, #000000 0%, #1A2871 47.92%, #460F47 100%);
+  background: linear-gradient(180deg, #000000 29%, #1A2871 47.92%, #460F47 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 body.fancybox-iosfix {
   position: relative !important;
@@ -258,8 +265,14 @@ button {
 }
 
 .content {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 200px;
+}
+@media (max-width: 1199px) {
+  .content {
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
 }
 
 .text-page:before, .text-page:after {

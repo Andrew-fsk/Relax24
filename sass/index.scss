@@ -16,7 +16,6 @@ body{padding: 0;}
 @import "fonts";
 @import "sprites";
 @import "reset";
-//@import "libs/popup-slide";
 //@import "libs/fancybox3";
 @import "libs/slick-theme";
 //@import "libs/select2";
@@ -28,15 +27,12 @@ body{padding: 0;}
 @import "components/button";
 @import "components/object-fit";
 @import "components/validation";
-
-//widgets
-//@import "widgets/pagination";
-//@import "widgets/breadcrumbs";
-//@import "widgets/validation";
+@import "components/breadcrumbs";
 
 //layouts
 @import "layouts/header";
 @import "layouts/banner";
+@import "layouts/stocks";
 @import "layouts/models";
 @import "layouts/main-page";
 @import "layouts/footer";
