@@ -1,0 +1,100 @@
+.pagination {
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+  margin: 0;
+}
+
+.pagination-item {
+  list-style: none;
+  box-shadow: 1px 6px 13px 4px rgba(89, 12, 12, 0.5);
+  background: #492E44;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 15px;
+  @include breakpoint(mxs){
+    display: none;
+    &:nth-of-type(2),
+    &:nth-of-type(3){
+      display: block;
+      margin: 0 10px;
+    }
+  }
+  &:hover{
+    a{
+      &:after{
+        opacity: 1;
+      }
+    }
+  }
+  &.prev,&.next{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-image: url("../images/svg/prev-arrow.svg");
+    @include breakpoint(mxs){
+      display: block;
+    }
+  }
+  &.next{
+    @include rotate(180);
+  }
+  &.last{
+    background: initial;
+    box-shadow: initial;
+    margin: 0;
+    a{
+      &:before{
+        content: initial;
+      }
+    }
+  }
+  a {
+    width: 46px;
+    height: 46px;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    border-radius: 50%;
+    font-family: $font-family-alt;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      border-radius: 50%;
+      transition: all .2s;
+      opacity: 0;
+      border: 3px solid #D82E44;
+      filter: drop-shadow(1px 0px 3px #FF0000);
+    }
+    &:before{
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      border-radius: 50%;
+      transition: all .2s;
+      border: 1px solid #ffffff;
+    }
+  }
+}
+
+.pagination-wrap{
+  padding-top: 20px;
+}

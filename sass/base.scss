@@ -53,6 +53,9 @@ body {
     background-position: center top;
     background-repeat: no-repeat;
     background-image: url("../images/bg.png");
+    @include breakpoint(sm-down){
+      background-size: cover;
+    }
   }
 }
 ul, ol {

@@ -13,7 +13,18 @@
   margin: 0 15px 20px 15px;
   text-decoration: none;
   color: #ffffff;
+  transition: all .2s;
+  @include breakpoint(sm-down){
+    height: 350px;
+  }
+  @include breakpoint(xs){
+    width: calc(50% - 30px);
+  }
+  @include breakpoint(sxs){
+    width: calc(100% - 30px);
+  }
   &:hover{
+    box-shadow: 1px 1px 17px #FC3F83;
     &:before{
       opacity: 1;
     }
@@ -61,7 +72,7 @@
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 10px;
-    height: 40px;
+    height: 43px;
     overflow: hidden;
   }
   .text{

@@ -75,6 +75,16 @@ body:after {
   background-repeat: no-repeat;
   background-image: url("../images/bg.png");
 }
+@media (max-width: 1024px) {
+  body:after {
+    background-size: cover;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  body:after {
+    background-size: cover;
+  }
+}
 
 ul, ol {
   list-style-position: outside;
@@ -122,7 +132,7 @@ h1, .h1 {
 }
 @media (max-width: 767px) {
   h1, .h1 {
-    margin-bottom: truepx;
+    margin-bottom: 30px;
     font-size: 28px;
   }
 }
@@ -142,7 +152,7 @@ h2, .h2 {
 }
 @media (max-width: 767px) {
   h2, .h2 {
-    margin-bottom: truepx;
+    margin-bottom: 20px;
     font-size: 26px;
   }
 }
