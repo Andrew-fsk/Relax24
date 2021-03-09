@@ -1,0 +1,37 @@
+extends base
+
+block content
+    .content
+        .container
+            include block/breadcrumbs
+            .stock-body
+                .stock-left
+                    h1 20 минут бесплатного парения в сауне/хаммаме
+                    .title При заказе программы от 7 000₽
+                    .text Для тех кто любит погорячее! Получите 20 минут насыщенного и впечатляющего парения в сауне/хаммаме при заказе эротической программы от 7000 рублей. Отдохните у нас с максимальной пользой для здоровья и комфортом для тела. Мы желаем вам легкости и бодрости даже в самые жаркие дни!
+                .stock-form.object-fit
+                    img(src='../images/stocks/stock (0).jpg')
+                    form
+                        .validation-field.error
+                            .placeholder Имя
+                            input(type='text' name='name')
+                        .validation-field
+                            .placeholder Телефон
+                            input(type='text' placeholder='+7 () - -' name='phone')
+                        .ac-jc
+                            .button
+                                span Получить подарок
+                                input(type='submit')
+                        .ac-jc
+                            .info-text Нажимая на кнопку, вы принимаете условия передачи данных
+            .similar-wrap
+                .h1 Похожие Акции
+                .stock-slider
+                    each value, key in ['Празднуйте 23 февраля каждый день!','20 минут бесплатного парения в сауне/хаммаме','Алкоголь — в подарок!','Празднуйте 23 февраля каждый день!','20 минут бесплатного парения в сауне/хаммаме','Алкоголь — в подарок!','Празднуйте 23 февраля каждый день!','20 минут бесплатного парения в сауне/хаммаме','Алкоголь — в подарок!',]
+                        a(href='#').stock-item.object-fit
+                            img(src='../images/stocks/stock (' + key + ').jpg')
+                            .stock-info
+                                .title #{value}
+                                .text Закажите любую программу и получите скидку 50% на второго мастера до 18:00
+                .pagination-wrap
+                    .stock-arrows.ac-jc
