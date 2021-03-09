@@ -1,0 +1,56 @@
+.page-404{
+  position: relative;
+  img{
+    max-width: 100%;
+    @include breakpoint(xs){
+      display: none;
+    }
+  }
+  .h1.error-text{
+    display: none;
+    @include breakpoint(xs){
+      display: block;
+      font-size: 8em;
+    }
+  }
+  .text-sector-404{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    z-index: 2;
+    @include breakpoint(xs){
+      position: initial;
+      background: #191A20;
+      border-radius: 8px;
+      padding: 30px 15px;
+    }
+  }
+  .text-404{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 60px;
+    width: 65%;
+    @include breakpoint(sm-down){
+      width: 100%;
+    }
+  }
+  .button{
+    background-image: initial;
+    padding: 15px 30px;
+    width: initial;
+    span{
+      white-space: nowrap;
+
+    }
+  }
+  h1{
+    font-size: 30px;
+    @include breakpoint(xs){
+      font-size: 24px;
+    }
+  }
+}

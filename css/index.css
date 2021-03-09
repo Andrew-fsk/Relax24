@@ -1871,6 +1871,87 @@ header .address:after {
   height: 385px;
 }
 
+.page-404 {
+  position: relative;
+}
+.page-404 img {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .page-404 img {
+    display: none;
+  }
+}
+.page-404 .h1.error-text {
+  display: none;
+}
+@media (max-width: 767px) {
+  .page-404 .h1.error-text {
+    display: block;
+    font-size: 8em;
+  }
+}
+.page-404 .text-sector-404 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .page-404 .text-sector-404 {
+    position: initial;
+    background: #191A20;
+    border-radius: 8px;
+    padding: 30px 15px;
+  }
+}
+.page-404 .text-404 {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 60px;
+  width: 65%;
+}
+@media (max-width: 1024px) {
+  .page-404 .text-404 {
+    width: 100%;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .page-404 .text-404 {
+    width: 100%;
+  }
+}
+.page-404 .button {
+  background-image: initial;
+  padding: 15px 30px;
+  width: initial;
+}
+.page-404 .button span {
+  white-space: nowrap;
+}
+.page-404 h1 {
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  .page-404 h1 {
+    font-size: 24px;
+  }
+}
+
 .girl-choose-wrap {
   padding-top: 50px;
   padding-bottom: 50px;
