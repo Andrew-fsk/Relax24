@@ -1952,6 +1952,103 @@ header .address:after {
   }
 }
 
+.vacancy-body {
+  background: #191A20;
+  border-radius: 8px;
+  padding: 40px 15px 80px 15px;
+}
+
+.vacancy-item {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.vacancy-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.vacancy-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 40%;
+  height: 460px;
+}
+@media (max-width: 1024px) {
+  .vacancy-image {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .vacancy-image {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .vacancy-image {
+    height: 320px;
+  }
+}
+
+.vacancy-info {
+  padding-left: 30px;
+}
+@media (max-width: 1024px) {
+  .vacancy-info {
+    padding-left: 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .vacancy-info {
+    padding-left: 0;
+  }
+}
+.vacancy-info .title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .vacancy-info .title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+.vacancy-info ul {
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+.vacancy-info ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+.vacancy-info ul li:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FF0068;
+}
+
 .girl-choose-wrap {
   padding-top: 50px;
   padding-bottom: 50px;

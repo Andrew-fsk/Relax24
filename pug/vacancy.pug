@@ -1,0 +1,37 @@
+extends base
+
+block content
+    .content
+        .container
+            include block/breadcrumbs
+            .vacancy-body
+                h1 Вакансии
+                .vacancy-item
+                    .vacancy-image.object-fit
+                        img(src='../images/vacancy1.jpg')
+                    .vacancy-info
+                        .title Администратор
+                        ul
+                            li Выдача зарплаты ежедневная
+                            li Заработная плата:от 3.000₽ до 7.000₽ в день
+                            li Официальное оформление
+                            li График работы: 1 / 2 (раб/вых)
+                            li Рабочий день с 13:00 до 06:00 утра
+                            li Возможно предоставление бесплатного проживания
+                        .button
+                            span Записаться
+                .vacancy-item
+                    .vacancy-image.object-fit
+                        img(src='../images/vacancy2.jpg')
+                    .vacancy-info
+                        .title Массажистка
+                        ul
+                            li Строго БЕЗ интима
+                            li Заработная плата от 200.000₽ — 300.000₽ и более
+                            li Выплаты производятся ежедневно
+                            li График работы обсуждается индивидуально
+                            li Салон работает 24 часа
+                            li Иногородним предоставляется комфортное жилье
+                            li Бесплатное обучение
+                        .button
+                            span Записаться
