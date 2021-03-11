@@ -525,6 +525,12 @@ body {
 .button:hover:before {
   opacity: 1;
 }
+.button.prev {
+  padding-right: 15px;
+  padding-left: 35px;
+  background-position: 11% 50%;
+  background-image: url("../images/svg/arrow-prev.svg");
+}
 
 .object-fit {
   background-size: cover;
@@ -736,6 +742,40 @@ body {
 
 .pagination-wrap {
   padding-top: 20px;
+}
+
+.pagination-min {
+  padding-top: 70px;
+}
+@media (max-width: 500px) {
+  .pagination-min {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .pagination-min {
+    padding-top: 30px;
+  }
+}
+.pagination-min .button:first-of-type {
+  margin-right: 10px;
+}
+@media (max-width: 500px) {
+  .pagination-min .button:first-of-type {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.pagination-min .button:last-of-type {
+  margin-left: 10px;
+}
+@media (max-width: 500px) {
+  .pagination-min .button:last-of-type {
+    margin-left: 0;
+  }
 }
 
 header {
@@ -2467,6 +2507,68 @@ header .address:after {
   .girls-slider .slick-arrow.slick-next {
     right: calc(50% - 76px);
   }
+}
+
+.blog-item-body h1 {
+  text-align: left;
+}
+.blog-item-body .date {
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.blog-item-body .text h4 {
+  text-align: left;
+}
+.blog-item-body .text img {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .blog-item-body .text img {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+.blog-item-body ul {
+  font-size: 16px;
+  margin-bottom: 35px;
+  padding-left: 10px;
+}
+.blog-item-body ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+.blog-item-body ul li:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FF0068;
+}
+.blog-item-body .black {
+  background: #000000;
+  border-radius: 5px;
+  padding: 15px 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .blog-item-body .black {
+    margin-left: 0;
+  }
+}
+.blog-item-body .bold {
+  font-weight: 500;
 }
 
 .girl-choose-wrap {

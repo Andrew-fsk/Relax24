@@ -53,4 +53,10 @@
       opacity: 1;
     }
   }
+  &.prev{
+    padding-right: 15px;
+    padding-left: 35px;
+    background-position: 11% 50%;
+    background-image: url("../images/svg/arrow-prev.svg");
+  }
 }

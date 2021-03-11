@@ -98,3 +98,28 @@
 .pagination-wrap{
   padding-top: 20px;
 }
+
+.pagination-min{
+  padding-top: 70px;
+  @include breakpoint(smxs){
+    @include flex-direction(column)
+  }
+  @include breakpoint(xs){
+    padding-top: 30px;
+  }
+  .button{
+    &:first-of-type{
+      margin-right: 10px;
+      @include breakpoint(smxs){
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+    &:last-of-type{
+      margin-left: 10px;
+      @include breakpoint(smxs){
+        margin-left: 0;
+      }
+    }
+  }
+}
