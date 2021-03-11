@@ -86,6 +86,30 @@ $(document).ready(function () {
         ]
     });
 
+    $('.girls-slider').slick({
+        infinite: true,
+        swipeToSlide: true,
+        autoplay: true,
+        dots: false,
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive:[
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
     let movementStrength = 25;
     let height = movementStrength / $(window).height();
     let width = movementStrength / $(window).width();
