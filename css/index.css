@@ -2049,6 +2049,199 @@ header .address:after {
   background-color: #FF0068;
 }
 
+.contact-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.contact-wrap .contact-left, .contact-wrap .contact-right {
+  width: 50%;
+}
+@media (max-width: 1024px) {
+  .contact-wrap .contact-left, .contact-wrap .contact-right {
+    width: 100%;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .contact-wrap .contact-left, .contact-wrap .contact-right {
+    width: 100%;
+  }
+}
+.contact-wrap .contact-right {
+  padding-left: 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .contact-wrap .contact-right {
+    padding-left: 0;
+    padding-top: 40px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .contact-wrap .contact-right {
+    padding-left: 0;
+    padding-top: 40px;
+  }
+}
+.contact-wrap .contact-right iframe {
+  max-width: 100%;
+  height: 400px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+
+.contact-body {
+  padding-left: 25px;
+  padding-right: 4px;
+}
+@media (max-width: 1024px) {
+  .contact-body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .contact-body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.contact-body h3 {
+  text-shadow: 0 2px 7px #ff0068;
+}
+.contact-body .phone, .contact-body header .address, header .contact-body .address, .contact-body .mobile-menu .address, .mobile-menu .contact-body .address {
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+.contact-body .phone:after, .contact-body header .address:after, header .contact-body .address:after, .contact-body .mobile-menu .address:after, .mobile-menu .contact-body .address:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 11px);
+  width: 22px;
+  height: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/phone.svg");
+}
+.contact-body .social-list {
+  margin-bottom: 60px;
+}
+.contact-body .social-list a {
+  margin-right: 35px;
+}
+.contact-body form {
+  max-width: 100%;
+}
+.contact-body .validation-field input {
+  width: 100%;
+}
+.contact-body .validation-field {
+  margin: 0 auto 15px auto;
+  width: 350px;
+  max-width: 100%;
+}
+.contact-body .info-text {
+  font-size: 12px;
+  line-height: 100%;
+  color: #C6C6C6;
+  width: 210px;
+  max-width: 100%;
+}
+.contact-body .button {
+  margin-bottom: 20px;
+}
+
+.contact-tab {
+  padding: 15px 10px;
+  background: #000000;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+.contact-tab.active {
+  border: 1px solid #FF0068;
+  box-shadow: 1px 1px 17px #FC3F83;
+}
+.contact-tab .address {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+  padding-left: 20px;
+  position: relative;
+}
+.contact-tab .address:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 11px);
+  width: 16px;
+  height: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/address.svg");
+}
+.contact-tab a {
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 30px;
+  padding-left: 20px;
+  position: relative;
+}
+.contact-tab a:first-of-type {
+  margin-left: 20px;
+}
+@media (max-width: 500px) {
+  .contact-tab a:first-of-type {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+}
+.contact-tab a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/phone.svg");
+}
+
 .girl-choose-wrap {
   padding-top: 50px;
   padding-bottom: 50px;
