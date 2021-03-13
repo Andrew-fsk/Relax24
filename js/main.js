@@ -8,11 +8,33 @@ $(document).ready(function () {
         container: '.wrap ',
         onMenuOpen: function () {
             document.activeElement.blur();
+            if($('.show-filter').hasClass('menu-open')){
+                $('.close-filter').click();
+            }
         },
         onMenuClose: function () {
             document.activeElement.blur();
         }
     });
+
+    $('.filter').PopupSlider({
+        effect: 'left',
+        button: '.show-filter',
+        closeButton: '.close-filter',
+        container: '.wrap ',
+        breakpoint: 1024,
+        onMenuOpen: function () {
+            document.activeElement.blur();
+        },
+        onMenuClose: function () {
+            document.activeElement.blur();
+        }
+    });
+
+    $('.close-filter').on('click touchend', function () {
+        $('.back-layer.menu-open').click();
+        return false;
+    })
 
     $('.banner').slick({
         infinite: true,
@@ -108,6 +130,47 @@ $(document).ready(function () {
                 }
             }
         ]
+    });
+
+    var heightSlider = document.getElementById('slider-height');
+    var sizeSlider = document.getElementById('slider-size');
+
+    noUiSlider.create(heightSlider, {
+        start: 170,
+        connect: 'lower',
+        tooltips: [true],
+        step: 1,
+        range: {
+            'min': 0,
+            'max': 210
+        },
+        format: {
+            to: function ( value ) {
+                return parseInt(value);
+            },
+            from: function ( value ) {
+                return parseInt(value);
+            }
+        }
+    });
+
+    noUiSlider.create(sizeSlider, {
+        start: 3,
+        connect: 'lower',
+        tooltips: [true],
+        step: 1,
+        range: {
+            'min': 0,
+            'max': 6
+        },
+        format: {
+            to: function ( value ) {
+                return parseInt(value);
+            },
+            from: function ( value ) {
+                return parseInt(value);
+            }
+        }
     });
 
     let movementStrength = 25;

@@ -1,0 +1,77 @@
+extends base
+
+block content
+    .content
+        .container
+            include block/breadcrumbs
+            h1 Мастера
+            .mob-filter.ac-jc
+                .button.show-filter
+                    span Фильтр
+            .masters-row
+                .filter
+                    .close-filter
+                    .filter-top
+                        .filter-title Фильтр
+                    .filter-group
+                        .group-title Рост
+                        .slider-wrap
+                            #slider-height
+                    .filter-group
+                        .group-title Размер груди
+                        .slider-wrap
+                            #slider-size
+                    .filter-group
+                        .group-title Цвет волос
+                        .filter-list
+                            each value in ['Блондинка','брюнетка','Рыжие ']
+                                label.filter-item
+                                    input(type='checkbox')
+                                    .checkbox
+                                    span #{value}
+                    .filter-group
+                        .group-title Расширенный
+                            each value in ['Сауна','Джакузи','Массаж девушкам ','Парам','Топ мастер','Работает сейчас','Новая девушка']
+                                label.filter-item
+                                    input(type='checkbox')
+                                    .checkbox
+                                    span #{value}
+                .model-column
+                    .model-grid
+                        each val, key in Array(12)
+                            if(key < 8)
+                                .model-item
+                                    .model-links
+                                        a(href='#').top
+                                        a(href='#').new
+                                        a(href='#').play
+                                    img(src="../images/watermark.png").watermark
+                                    .address пр-т. Хусаина Ямашева, 17
+                                    a(href='#').model-image.object-fit
+                                        img(src='../images/models/model' + key + '.jpg')
+                                    a(href='#').model-info
+                                        .model-text
+                                            h5  Ангелина, 24
+                                            .prop-list
+                                                .prop Рост: <span>170</span>
+                                                .prop Вес: <span>51</span>
+                                                .prop Грудь: <span>2</span>
+                                        img.model-icon(src='../images/model-icon.png')
+                            else
+                                .model-item.no-image
+                                    .model-links
+                                        a(href='#').top
+                                        a(href='#').new
+                                        a(href='#').play
+                                    .address.red пр-т. Хусаина Ямашева, 17
+                                    a(href='#').model-image.object-fit
+                                        img(src='../images/svg/no-image.svg')
+                                    a(href='#').model-info
+                                        .model-text
+                                            h5  Ангелина, 24
+                                            .prop-list
+                                                .prop Рост: <span>170</span>
+                                                .prop Вес: <span>51</span>
+                                                .prop Грудь: <span>2</span>
+                                        img.model-icon(src='../images/model-icon.png')
+                    include block/pagination

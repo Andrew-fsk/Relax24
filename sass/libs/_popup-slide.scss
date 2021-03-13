@@ -101,6 +101,7 @@ $popup-transition: .4s;
   &.menu-left {
     top: 0;
     left: 0;
+    z-index: 115;
     @include transform(translateX(-120%));
     transition: transform $popup-transition;
     &.menu-open {
