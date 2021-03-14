@@ -5035,4 +5035,132 @@ footer:before {
   top: 40%;
 }
 
+.program-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .program-row {
+    margin-bottom: 30px;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+.program-row .left {
+  width: 40%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  height: 460px;
+}
+@media (max-width: 767px) {
+  .program-row .left {
+    height: 340px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.program-row .right {
+  width: 60%;
+  padding-left: 30px;
+}
+@media (max-width: 767px) {
+  .program-row .right {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.program-item-body {
+  margin-bottom: 130px;
+}
+.program-item-body .text {
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+.program-item-body ul {
+  font-size: 16px;
+  padding-top: 10px;
+}
+.program-item-body ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+.program-item-body ul li:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FF0068;
+}
+
+.program-info-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 40px;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.program-info-row img {
+  margin-right: 40px;
+}
+@media (max-width: 767px) {
+  .program-info-row img {
+    margin-right: 10px;
+  }
+}
+.program-info-row span {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #FF0068;
+}
+.program-info-row span:first-of-type {
+  text-align: right;
+  margin-right: 40px;
+}
+@media (max-width: 767px) {
+  .program-info-row span:first-of-type {
+    margin-right: 10px;
+  }
+}
+.program-info-row span:first-of-type span {
+  margin: 0;
+}
+.program-info-row span:last-of-type {
+  text-align: left;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .program-info-row span {
+    font-size: 22px;
+  }
+}
+.program-info-row span span {
+  padding: 0;
+  text-transform: initial;
+  font-size: 14px;
+  color: #ffffff;
+}
+
 /*# sourceMappingURL=index.css.map */
