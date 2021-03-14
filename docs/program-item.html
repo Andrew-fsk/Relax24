@@ -49,6 +49,37 @@
         </div>
       </div>
       <div class="content">
+        <div class="popup js-popup" data-id-popup="popup-0">
+          <div class="js-popup__wrapp">
+            <div class="popup__close js-popup__close close-button"></div>
+            <div class="popup_container">
+              <h3>Записаться</h3>
+              <form class="form">
+                <div class="validation-field error">
+                  <div class="placeholder">Имя</div>
+                  <input type="text" name="name">
+                </div>
+                <div class="validation-field">
+                  <div class="placeholder">Телефон</div>
+                  <input type="text" placeholder="+7 () - -" name="phone">
+                </div>
+                <div class="ac-jc"><a class="button js-btn-popup js-popup__close" href="popup-1"><span>Записаться</span>
+                    <input type="submit"></a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="popup js-popup" data-id-popup="popup-1">
+          <div class="js-popup__wrapp success-popup">
+            <div class="popup__close js-popup__close close-button"></div>
+            <div class="popup_container"><img src="../images/success.jpg">
+              <div class="success-wrap">
+                <h3>СПАСИБО ЗА ЗАЯВКУ</h3>
+                <div class="success-text">В ближайшее время с вами свяжется оператор для подтверждения заказа. Пожалуйста, включите ваш контактный телефон.</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container">
           <ul class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="./index.html" itemprop="item">Главная</a></li>
@@ -67,7 +98,7 @@
                   <li>Чайная церемония</li>
                   <li>Классика по усиленной технике</li>
                   <li>Выбор игрушки с двойным релаксом</li>
-                </ul><a class="button" href="#">Записаться</a>
+                </ul><a class="button js-btn-popup" href="popup-0">Записаться</a>
               </div>
             </div>
             <div class="h1">Другие программы</div>
@@ -187,7 +218,8 @@
     </div>
     <footer>
       <div class="container">
-        <div class="footer-top"><a class="logo" href="./index.html"><img src="../images/footer-logo.png"></a>
+        <div class="footer-top">
+          <div class="logo"><img src="../images/footer-logo.png"></div>
           <div></div>
           <div class="payments-wrap">
             <div class="title">Мы принимаем</div>

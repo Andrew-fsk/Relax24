@@ -48,7 +48,6 @@
           </div>
         </div>
       </div>
-      <div class="back-layer js-popup__close"></div>
       <div class="popup js-popup" data-id-popup="popup-0">
         <div class="js-popup__wrapp">
           <div class="popup__close js-popup__close close-button"></div>
@@ -77,6 +76,14 @@
               <h3>СПАСИБО ЗА ЗАЯВКУ</h3>
               <div class="success-text">В ближайшее время с вами свяжется оператор для подтверждения заказа. Пожалуйста, включите ваш контактный телефон.</div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup js-popup" data-id-popup="popup-2">
+        <div class="js-popup__wrapp success-popup video-popup">
+          <div class="popup__close js-popup__close close-button"></div>
+          <div class="popup_container">
+            <iframe type="text/html" width="640" height="390" src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&amp;origin=http://example.com" frameborder="0"></iframe>
           </div>
         </div>
       </div>
@@ -580,16 +587,16 @@
         <div class="container">
           <div class="h1">Наш интерьер</div>
           <div class="interier-text">Как далеко вы готовы зайти в своих эротических фантазиях? Даете ли вы волю своим желаниям или существуют ограничения? Мы рады пригласить вас на сеанс эротического массажа, где не существует запретов и все ваши мечты станут реальностью. Круглосуточный график работы салона Relax24 позволит вам в удобное время получить неподдельное удовольствие и массу положительных эмоций по адресу: г. Казань, Просп. А.Камалеева, 34в</div>
-          <div class="interier-grid"><a class="interier-item object-fit">
-              <div class="play-button"></div><img src="../images/interier/interier0.jpg"></a><a class="interier-item object-fit">
-              <div class="play-button"></div><img src="../images/interier/interier1.jpg"></a><a class="interier-item object-fit">
-              <div class="play-button"></div><img src="../images/interier/interier2.jpg"></a><a class="interier-item object-fit">
+          <div class="interier-grid"><a class="js-btn-popup interier-item object-fit" href="popup-2">
+              <div class="play-button"></div><img src="../images/interier/interier0.jpg"></a><a class="js-btn-popup interier-item object-fit" href="popup-2">
+              <div class="play-button"></div><img src="../images/interier/interier1.jpg"></a><a class="js-btn-popup interier-item object-fit" href="popup-2">
+              <div class="play-button"></div><img src="../images/interier/interier2.jpg"></a><a class="js-btn-popup interier-item object-fit" href="popup-2">
               <div class="play-button"></div><img src="../images/interier/interier3.jpg"></a>
           </div>
-          <div class="interier-slider"><a class="interier-item object-fit">
-              <div class="play-button"></div><img src="../images/interier/interier0.jpg"></a><a class="interier-item object-fit">
-              <div class="play-button"></div><img src="../images/interier/interier1.jpg"></a><a class="interier-item object-fit">
-              <div class="play-button"></div><img src="../images/interier/interier2.jpg"></a><a class="interier-item object-fit">
+          <div class="interier-slider"><a class="js-btn-popup interier-item object-fit" href="popup-2">
+              <div class="play-button"></div><img src="../images/interier/interier0.jpg"></a><a class="js-btn-popup interier-item object-fit" href="popup-2">
+              <div class="play-button"></div><img src="../images/interier/interier1.jpg"></a><a class="js-btn-popup interier-item object-fit" href="popup-2">
+              <div class="play-button"></div><img src="../images/interier/interier2.jpg"></a><a class="js-btn-popup interier-item object-fit" href="popup-2">
               <div class="play-button"></div><img src="../images/interier/interier3.jpg"></a>
           </div>
           <div class="bottom-button-wrap ac-jc"><a class="button" href="#"><span>Все Программы</span></a></div>
@@ -685,7 +692,8 @@
     </div>
     <footer>
       <div class="container">
-        <div class="footer-top"><a class="logo" href="./index.html"><img src="../images/footer-logo.png"></a>
+        <div class="footer-top">
+          <div class="logo"><img src="../images/footer-logo.png"></div>
           <div></div>
           <div class="payments-wrap">
             <div class="title">Мы принимаем</div>

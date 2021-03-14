@@ -1,7 +1,6 @@
 extends base
 
 block content
-    .back-layer.js-popup__close
     .popup.js-popup(data-id-popup="popup-0")
         .js-popup__wrapp
             .popup__close.js-popup__close.close-button
@@ -26,6 +25,11 @@ block content
                 .success-wrap
                     h3 СПАСИБО ЗА ЗАЯВКУ
                     .success-text В ближайшее время с вами свяжется оператор для подтверждения заказа. Пожалуйста, включите ваш контактный телефон.
+    .popup.js-popup(data-id-popup="popup-2")
+        .js-popup__wrapp.success-popup.video-popup
+            .popup__close.js-popup__close.close-button
+            .popup_container
+                iframe(type='text/html' width='640' height='390' src='http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com' frameborder='0')
     .banner-wrap
         .container
             .banner
@@ -199,12 +203,12 @@ block content
             .interier-text Как далеко вы готовы зайти в своих эротических фантазиях? Даете ли вы волю своим желаниям или существуют ограничения? Мы рады пригласить вас на сеанс эротического массажа, где не существует запретов и все ваши мечты станут реальностью. Круглосуточный график работы салона Relax24 позволит вам в удобное время получить неподдельное удовольствие и массу положительных эмоций по адресу: г. Казань, Просп. А.Камалеева, 34в
             .interier-grid
                 each val, key in Array(4)
-                    a.interier-item.object-fit
+                    a(href="popup-2").js-btn-popup.interier-item.object-fit
                         .play-button
                         img(src='../images/interier/interier' + key + '.jpg')
             .interier-slider
                 each val, key in Array(4)
-                    a.interier-item.object-fit
+                    a(href="popup-2").js-btn-popup.interier-item.object-fit
                         .play-button
                         img(src='../images/interier/interier' + key + '.jpg')
             .bottom-button-wrap.ac-jc

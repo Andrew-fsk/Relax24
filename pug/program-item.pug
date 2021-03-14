@@ -2,6 +2,30 @@ extends base
 
 block content
     .content
+        .popup.js-popup(data-id-popup="popup-0")
+            .js-popup__wrapp
+                .popup__close.js-popup__close.close-button
+                .popup_container
+                    h3 Записаться
+                    form.form
+                        .validation-field.error
+                            .placeholder Имя
+                            input(type='text' name='name')
+                        .validation-field
+                            .placeholder Телефон
+                            input(type='text' placeholder='+7 () - -' name='phone')
+                        .ac-jc
+                            a(href="popup-1").button.js-btn-popup.js-popup__close
+                                span Записаться
+                                input(type='submit')
+        .popup.js-popup(data-id-popup="popup-1")
+            .js-popup__wrapp.success-popup
+                .popup__close.js-popup__close.close-button
+                .popup_container
+                    img(src='../images/success.jpg')
+                    .success-wrap
+                        h3 СПАСИБО ЗА ЗАЯВКУ
+                        .success-text В ближайшее время с вами свяжется оператор для подтверждения заказа. Пожалуйста, включите ваш контактный телефон.
         .container
             include block/breadcrumbs
             .vacancy-body.program-item-body
@@ -21,7 +45,7 @@ block content
                             li Чайная церемония
                             li Классика по усиленной технике
                             li Выбор игрушки с двойным релаксом
-                        a(href='#').button Записаться
+                        a(href="popup-0").button.js-btn-popup Записаться
                 .h1 Другие программы
                 .master-slider
                     each value,key in ['Тайский боди','Gold','Доминация','Экспресс Lux','Экспресс Lux']

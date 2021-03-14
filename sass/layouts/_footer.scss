@@ -74,6 +74,7 @@ footer{
   .logo{
     z-index: 2;
     position: absolute;
+    cursor: pointer;
     left: -15%;
     top: 0;
     @include breakpoint(sm-down){

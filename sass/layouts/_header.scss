@@ -3,7 +3,10 @@ header {
   overflow: hidden;
   @include breakpoint(xs){
     z-index: 112;
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
   }
   .container {
     position: relative;

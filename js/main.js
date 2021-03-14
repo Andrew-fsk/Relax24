@@ -1,6 +1,6 @@
 $(document).ready(function () {
     setPopup();
-
+    setWrap();
     $('.mobile-menu-wrap').PopupSlider({
         effect: 'right',
         button: '.burger',
@@ -156,6 +156,28 @@ $(document).ready(function () {
         ]
     });
 
+    $(' .address').on('click touchend', function () {
+        let contactBlock = $('.contact');
+        if (contactBlock){
+            if(isMobile.any()){
+                $('.burger.menu-open').click();
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: contactBlock.offset().top - $('header').innerHeight()
+                }, 1200);
+            }else{
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: contactBlock.offset().top
+                }, 1200);
+            }
+        }
+    })
+
+    $('.footer-top .logo').on('click touchend', function () {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: 0
+        }, 1200);
+    })
+
     $('.model-popup-slider-nav').slick({
         infinite: true,
         swipeToSlide: true,
@@ -275,8 +297,15 @@ function setPopup(){
     mobMenu.css('height', $(this).height() -header.innerHeight());
 }
 
+function setWrap(){
+    if($(window).innerWidth() < 767){
+        $('.wrap').css('padding-top', $('header').innerHeight());
+    }
+}
+
 $(window).resize(function () {
     setPopup();
+    setWrap();
 });
 
 function openPopup(id) {
@@ -286,3 +315,27 @@ function openPopup(id) {
 function close_popup() {
     $('.js-popup').fadeOut(300);
 }
+
+
+/* Проверка mobile усройств*/
+
+isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
