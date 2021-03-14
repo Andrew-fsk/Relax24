@@ -2,6 +2,11 @@ extends base
 
 block content
     .content
+        .popup.js-popup(data-id-popup="popup-3")
+            .js-popup__wrapp.success-popup.video-popup
+                .popup__close.js-popup__close.close-button
+                .popup_container
+                    iframe(type='text/html' width='640' height='390' src='http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com' frameborder='0')
         .popup.js-popup(data-id-popup="popup-0")
             .js-popup__wrapp
                 .popup__close.js-popup__close.close-button
@@ -62,7 +67,7 @@ block content
                             .model-links
                                 a(href='#').top
                                 a(href='#').new
-                                a(href='#').play
+                                a(href='popup-3').play.js-btn-popup
                             img(src="../images/watermark.png").watermark
                             .address пр-т. Хусаина Ямашева, 17
                             a(href='#').model-image.object-fit

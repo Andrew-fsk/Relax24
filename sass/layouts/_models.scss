@@ -759,3 +759,10 @@
     margin: 0 15px;
   }
 }
+
+.play.js-btn-popup{
+  @include breakpoint(md-down){
+    pointer-events: none;
+    cursor: default;
+  }
+}

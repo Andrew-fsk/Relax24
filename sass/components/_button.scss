@@ -37,16 +37,17 @@
   &:before{
     content: '';
     position: absolute;
-    left: 2px;
-    top: 2px;
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
-    border-radius: 50px;
-    background-image: url("../images/button.png");
-    background-position: center;
+    left: 8px;
+    top: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 15px);
+    box-shadow: 0 0 4px 5px red;
     mix-blend-mode: color-dodge;
+    border-radius: 50px;
+    z-index: 4;
     transition: all .2s;
     opacity: 0;
+    animation: linear 1s infinite alternate glow;
   }
   &:hover{
     &:before{
@@ -62,7 +63,7 @@
   span{
     position: relative;
     &:after{
-      content: '';
+      //content: '';
       position: absolute;
       left: 50%;
       top: 50%;
@@ -74,6 +75,24 @@
       opacity: 0.15;
       @include transform(translate(-50%, -50%));
     }
+  }
+}
+
+@keyframes glow {
+  from{
+    box-shadow: 0 0 4px 2px red;
+  }
+  /*20%{
+    box-shadow: 0 0 4px 7px red;
+  }*/
+  50%{
+    box-shadow: 0 0 4px 7px red;
+  }/*
+  90%{
+    box-shadow: 0 0 4px 2px red;
+  }*/
+  to{
+    box-shadow: 0 0 4px 5px red;
   }
 }
 

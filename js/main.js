@@ -37,6 +37,7 @@ $(document).ready(function () {
     })
 
     $('.banner').slick({
+        fade: true,
         infinite: true,
         swipeToSlide: true,
         dots: true,
