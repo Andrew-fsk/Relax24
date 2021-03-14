@@ -132,46 +132,72 @@ $(document).ready(function () {
         ]
     });
 
-    var heightSlider = document.getElementById('slider-height');
-    var sizeSlider = document.getElementById('slider-size');
-
-    noUiSlider.create(heightSlider, {
-        start: 170,
-        connect: 'lower',
-        tooltips: [true],
-        step: 1,
-        range: {
-            'min': 0,
-            'max': 210
-        },
-        format: {
-            to: function ( value ) {
-                return parseInt(value);
+    $('.master-slider').slick({
+        infinite: false,
+        swipeToSlide: true,
+        autoplay: true,
+        dots: false,
+        arrows: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive:[
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
             },
-            from: function ( value ) {
-                return parseInt(value);
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                }
             }
-        }
+        ]
     });
 
-    noUiSlider.create(sizeSlider, {
-        start: 3,
-        connect: 'lower',
-        tooltips: [true],
-        step: 1,
-        range: {
-            'min': 0,
-            'max': 6
-        },
-        format: {
-            to: function ( value ) {
-                return parseInt(value);
+    let heightSlider = document.getElementById('slider-height');
+    let sizeSlider = document.getElementById('slider-size');
+
+    if(heightSlider || sizeSlider){
+        noUiSlider.create(heightSlider, {
+            start: 170,
+            connect: 'lower',
+            tooltips: [true],
+            step: 1,
+            range: {
+                'min': 0,
+                'max': 210
             },
-            from: function ( value ) {
-                return parseInt(value);
+            format: {
+                to: function ( value ) {
+                    return parseInt(value);
+                },
+                from: function ( value ) {
+                    return parseInt(value);
+                }
             }
-        }
-    });
+        });
+
+        noUiSlider.create(sizeSlider, {
+            start: 3,
+            connect: 'lower',
+            tooltips: [true],
+            step: 1,
+            range: {
+                'min': 0,
+                'max': 6
+            },
+            format: {
+                to: function ( value ) {
+                    return parseInt(value);
+                },
+                from: function ( value ) {
+                    return parseInt(value);
+                }
+            }
+        });
+    }
 
     let movementStrength = 25;
     let height = movementStrength / $(window).height();

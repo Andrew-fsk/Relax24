@@ -1,0 +1,54 @@
+extends base
+
+block content
+    .content
+        .container
+            include block/breadcrumbs
+            .vacancy-body
+                .master-info
+                    .left
+                        .ac-jc.master-name-row
+                            h1 Любовь, 25
+                            .master-links
+                                a(href='#').top
+                                    img(src='../images/Top1.png')
+                                a(href='#').new
+                                    img(src='../images/new 1.png')
+                                a(href='#').play
+                                    img(src='../images/play 1.png')
+                    .right.green
+                        h3 Работает сейчас
+                        h6 ул. Фатыха Амирхана, 18А
+                .stat Рост: 172 Вес: 54 Грудь: 3
+                .master-slider.slide
+                    each value,key in Array(5)
+                        .slide
+                            img(src='../images/watermark.png').watermark
+                            .master-slide.object-fit
+                                img(src='../images/master-item/master (' + key + ').jpg')
+                .master-row
+                    .master-form
+                        h3 Записаться
+                        form
+                            .validation-field.error
+                                .placeholder Имя
+                                input(type='text' name='name')
+                            .validation-field
+                                .placeholder Телефон
+                                input(type='text' placeholder='+7 () - -' name='phone')
+                            .ac-jc
+                                .button
+                                    span Записаться
+                                    input(type='submit')
+                            .ac-jc
+                                .info-text Нажимая на кнопку, вы принимаете условия передачи данных
+                    .map
+                        iframe(width='600' height='450' style="border:0" allowfullscreen='' loading="lazy" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319")
+                .h1 Любимые программы мастера
+                .master-slider
+                    each value,key in ['Тайский боди','Gold','Доминация','Экспресс Lux','Экспресс Lux']
+                        .slide
+                            a(href="#").program-slide.object-fit
+                                img(src='../images/programs/program' + key + '.jpg')
+                                .slide-title
+                                    h4 #{value}
