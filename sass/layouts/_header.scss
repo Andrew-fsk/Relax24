@@ -265,3 +265,8 @@ header {
     }
   }
 }
+
+.no-events{
+  pointer-events: none;
+  cursor: default;
+}

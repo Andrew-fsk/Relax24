@@ -1654,6 +1654,11 @@ header .address:after {
   background-image: url("../images/address.svg");
 }
 
+.no-events {
+  pointer-events: none;
+  cursor: default;
+}
+
 .banner {
   position: relative;
   height: calc(100vh - 198px);
