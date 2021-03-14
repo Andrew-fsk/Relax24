@@ -305,7 +305,14 @@
   @include align-items(center);
   font-size: 16px;
   margin-bottom: 15px;
-
+  &:hover{
+    input{
+      box-shadow: 1px 0px 3px #FF0000;
+    }
+    .checkbox:after {
+      opacity: 1;
+    }
+  }
   input {
     display: none;
 
@@ -332,7 +339,6 @@
     border: 3px solid #D82E44;
     border-radius: 3px;
     position: relative;
-
     &:after {
       content: '';
       position: absolute;
@@ -671,5 +677,85 @@
       @include align-items(center);
       @include flexbox;
     }
+  }
+}
+
+.model-popup-slider{
+  margin-bottom: 10px;
+  .slide{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 660px;
+    display: block;
+    @include breakpoint(smxs){
+      height: 400px;
+    }
+  }
+}
+
+.model-popup-slider-nav{
+  padding: 0 60px;
+  .slick-arrow{
+    position: absolute;
+    box-shadow: 1px 6px 13px 4px rgba(89, 12, 12, 0.5);
+    background: #492E44;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    padding: 5px;
+    bottom: calc(50% - 28px);
+    &:hover{
+      &:after{
+        opacity: 1;
+      }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      border-radius: 50%;
+      transition: all .2s;
+      opacity: 0;
+      border: 3px solid #D82E44;
+      filter: drop-shadow(1px 0px 3px #FF0000);
+    }
+    &:before{
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      border-radius: 50%;
+      transition: all .2s;
+      border: 1px solid #ffffff;
+    }
+    &.slick-prev,&.slick-next{
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 15%;
+      left: 0;
+      background-image: url("../images/svg/prev-arrow.svg");
+    }
+    &.slick-next{
+      @include rotate(180);
+        right: 0;
+        left: initial;
+    }
+
+  }
+
+  .slide{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100px;
+    display: block;
+    margin: 0 15px;
   }
 }

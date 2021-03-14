@@ -3,6 +3,22 @@ extends base
 block content
     .content
         .container
+            .popup.js-popup(data-id-popup="popup-1")
+                .js-popup__wrapp.model-popup
+                    .popup__close.js-popup__close.close-button
+                    .popup_container
+                        .model-popup-slider
+                            each value,key in Array(5)
+                                .slide
+                                    img(src='../images/watermark.png').watermark
+                                    .master-slide.object-fit
+                                        img(src='../images/master-item/master (' + key + ').jpg')
+                        .model-popup-slider-nav
+                            each value,key in Array(5)
+                                .slide
+                                    img(src='../images/watermark.png').watermark
+                                    .master-slide.object-fit
+                                        img(src='../images/master-item/master (' + key + ').jpg')
             include block/breadcrumbs
             .vacancy-body
                 .master-info
@@ -22,7 +38,7 @@ block content
                 .stat Рост: 172 Вес: 54 Грудь: 3
                 .master-slider.slide
                     each value,key in Array(5)
-                        .slide
+                        a(href="popup-1").js-btn-popup.slide
                             img(src='../images/watermark.png').watermark
                             .master-slide.object-fit
                                 img(src='../images/master-item/master (' + key + ').jpg')

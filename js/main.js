@@ -156,6 +156,42 @@ $(document).ready(function () {
         ]
     });
 
+    $('.model-popup-slider-nav').slick({
+        infinite: true,
+        swipeToSlide: true,
+        autoplay: true,
+        dots: false,
+        arrows: true,
+        asNavFor:'.model-popup-slider',
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive:[
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+    $('.model-popup-slider').slick({
+        infinite: true,
+        swipeToSlide: true,
+        autoplay: true,
+        dots: false,
+        arrows: true,
+        asNavFor:'.model-popup-slider-nav',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
     let heightSlider = document.getElementById('slider-height');
     let sizeSlider = document.getElementById('slider-size');
 

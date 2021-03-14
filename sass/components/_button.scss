@@ -59,6 +59,22 @@
     background-position: 11% 50%;
     background-image: url("../images/svg/arrow-prev.svg");
   }
+ /* span{
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(49.89% 50.08% at 49.78% 50.08%, #000000 0%, #3A0000 4%, #6D0000 9%, #9A0000 13%, #BE0000 18%, #DB0000 23%, #EF0000 27%, #FB0000 32%, #FF0000 36%, #DB0000 40%, #A90000 46%, #7B0000 53%, #550000 60%, #360000 67%, #1E0000 74%, #0D0000 81%, #030000 90%, #000000 100%);
+      background-blend-mode: screen;
+      mix-blend-mode: screen;
+      opacity: 0.15;
+      @include transform(translate(-50%, -50%));
+    }
+  }*/
 }
 
 .close-button{
