@@ -1,6 +1,31 @@
 extends base
 
 block content
+    .back-layer.js-popup__close
+    .popup.js-popup(data-id-popup="popup-0")
+        .js-popup__wrapp
+            .popup__close.js-popup__close.close-button
+            .popup_container
+                h3 Записаться
+                form.form
+                    .validation-field.error
+                        .placeholder Имя
+                        input(type='text' name='name')
+                    .validation-field
+                        .placeholder Телефон
+                        input(type='text' placeholder='+7 () - -' name='phone')
+                    .ac-jc
+                        a(href="popup-1").button.js-btn-popup.js-popup__close
+                            span Записаться
+                            input(type='submit')
+    .popup.js-popup(data-id-popup="popup-1")
+        .js-popup__wrapp.success-popup
+            .popup__close.js-popup__close.close-button
+            .popup_container
+                img(src='../images/success.jpg')
+                .success-wrap
+                    h3 СПАСИБО ЗА ЗАЯВКУ
+                    .success-text В ближайшее время с вами свяжется оператор для подтверждения заказа. Пожалуйста, включите ваш контактный телефон.
     .banner-wrap
         .container
             .banner
@@ -8,19 +33,19 @@ block content
                     .banner-title <span><span>VIP</span>-комната</span><br> с личным джакузи и хамам в подарок
                     .banner-text Компаниям от трёх человек в течении всей программы
                     .banner-buttons
-                        a(href='#').button Записаться
+                        a(href="popup-0").button.js-btn-popup Записаться
                         a(href='#').button Подобрать девушку
                 .banner-slide
                     .banner-title <span>VIP-комната</span><br> с личным джакузи и хамам в подарок
                     .banner-text Компаниям от трёх человек в течении всей программы
                     .banner-buttons
-                        a(href='#').button Записаться
+                        a(href="popup-0").button.js-btn-popup Записаться
                         a(href='#').button Подобрать девушку
                 .banner-slide
                     .banner-title <span>VIP-комната</span><br> с личным джакузи и хамам в подарок
                     .banner-text Компаниям от трёх человек в течении всей программы
                     .banner-buttons
-                        a(href='#').button Записаться
+                        a(href="popup-0").button.js-btn-popup Записаться
                         a(href='#').button Подобрать девушку
     .master-on-main
         .container

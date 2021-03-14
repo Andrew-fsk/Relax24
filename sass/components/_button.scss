@@ -71,17 +71,35 @@
   background-color: #492E44;
   box-shadow: 1px 6px 13px 4px rgba(89, 12, 12, 0.5);
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 65%;
   background-position: center;
   background-image: url("../images/svg/close.svg");
+  &:hover{
+    &:before{
+      opacity: 1;
+    }
+  }
   &:after{
     content: '';
     position: absolute;
-    left: 1%;
-    top: 1%;
-    width: 98%;
-    height: 98%;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
     border-radius: 50%;
     border: 1px solid #ffffff;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: 3px solid #D82E44;
+    filter: drop-shadow(1px 0px 3px #FF0000);
+    opacity: 0;
+    transition: all .2s;
   }
 }
