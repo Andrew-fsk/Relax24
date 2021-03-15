@@ -6,11 +6,16 @@
     margin: 0;
     padding-right: 20px;
     position: relative;
+    &:hover{
+      a,span{
+        color: $color1;
+      }
+    }
     &:after{
       content: '>';
       position: absolute;
       right: 4px;
-      top: 2px;
+      top: 0;
       font-size: 16px;
       color: #ffffff;
     }
@@ -29,6 +34,7 @@
       line-height: 150%;
       text-transform: uppercase;
       color: #FFFFFF;
+      transition: all .2s;
     }
   }
 }

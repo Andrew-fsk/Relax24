@@ -61,7 +61,10 @@ header {
     padding-left: 25px;
     position: relative;
     text-decoration: none;
-
+    transition: all .2s;
+    &:hover{
+      color: $color1
+    }
     &:after {
       content: '';
       position: absolute;
@@ -244,6 +247,10 @@ header {
     padding-left: 35px;
     position: relative;
     text-decoration: none;
+    transition: all .2s;
+    &:hover{
+      color: $color1
+    }
     &:after {
       content: '';
       position: absolute;

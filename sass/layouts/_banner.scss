@@ -145,7 +145,7 @@
   .button{
     &:first-of-type{
       margin-right: 25px;
-      @include breakpoint(xs){
+      @include breakpoint(sm-down){
         margin-right: 0;
         margin-bottom: 10px;
       }

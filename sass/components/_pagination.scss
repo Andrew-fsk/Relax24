@@ -39,7 +39,7 @@
     }
   }
   &.next{
-    @include rotate(180);
+    background-image: url("../images/svg/next-arrow.svg");
   }
   &.last{
     background: initial;

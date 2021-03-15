@@ -1025,8 +1025,8 @@ body {
   margin: auto;
 }
 .js-popup__wrapp.video-popup {
-  width: 700px;
-  height: 500px;
+  width: 1200px;
+  height: 760px;
   max-width: 100%;
   max-height: 100%;
 }
@@ -1147,11 +1147,14 @@ body {
   padding-right: 20px;
   position: relative;
 }
+.breadcrumbs li:hover a, .breadcrumbs li:hover span {
+  color: #FF0068;
+}
 .breadcrumbs li:after {
   content: ">";
   position: absolute;
   right: 4px;
-  top: 2px;
+  top: 0;
   font-size: 16px;
   color: #ffffff;
 }
@@ -1170,6 +1173,7 @@ body {
   line-height: 150%;
   text-transform: uppercase;
   color: #FFFFFF;
+  transition: all 0.2s;
 }
 
 .pagination {
@@ -1224,11 +1228,7 @@ body {
   }
 }
 .pagination-item.next {
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  background-image: url("../images/svg/next-arrow.svg");
 }
 .pagination-item.last {
   background: initial;
@@ -1415,6 +1415,10 @@ header .phone, header .mobile-menu .address, .mobile-menu header .address, heade
   padding-left: 25px;
   position: relative;
   text-decoration: none;
+  transition: all 0.2s;
+}
+header .phone:hover, header .address:hover {
+  color: #FF0068;
 }
 header .phone:after, header .mobile-menu .address:after, .mobile-menu header .address:after, header .address:after {
   content: "";
@@ -1637,6 +1641,10 @@ header .address:after {
   padding-left: 35px;
   position: relative;
   text-decoration: none;
+  transition: all 0.2s;
+}
+.mobile-menu .phone:hover, .mobile-menu .address:hover {
+  color: #FF0068;
 }
 .mobile-menu .phone:after, .mobile-menu .address:after {
   content: "";
@@ -1883,7 +1891,13 @@ header .address:after {
 .banner-buttons .button:first-of-type {
   margin-right: 25px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
+  .banner-buttons .button:first-of-type {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
   .banner-buttons .button:first-of-type {
     margin-right: 0;
     margin-bottom: 10px;
@@ -2269,6 +2283,12 @@ header .address:after {
   width: calc(25% - 30px);
   margin: 0 15px 40px 15px;
   height: 385px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+.model-grid .model-item:hover {
+  border: 1px solid #FB0169;
+  box-shadow: 0px 2px 7px #FF0068;
 }
 
 .model-item {
@@ -2286,6 +2306,8 @@ header .address:after {
   -khtml-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  min-width: 95px;
+  min-height: 40px;
   max-width: 95px;
   background: #000000;
   border-radius: 23px 0px 0px 23px;
@@ -2421,6 +2443,10 @@ header .address:after {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
+  transition: all 0.2s;
+}
+.model-item .model-links a:hover {
+  box-shadow: 1px 1px 17px #FC3F83;
 }
 .model-item .model-links a.top {
   background-color: #2A2A2A;
@@ -2784,6 +2810,28 @@ header .address:after {
 .master-info .master-links a {
   margin-right: 30px;
   display: inline-block;
+  position: relative;
+  transition: all 0.2s;
+}
+.master-info .master-links a img {
+  position: relative;
+  z-index: 2;
+}
+.master-info .master-links a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: radial-gradient(circle, #fc3f83 0%, rgba(0, 212, 255, 0) 50%);
+  border-radius: 50%;
+  transition: all 0.2s;
+  opacity: 0;
+}
+.master-info .master-links a:hover:after {
+  opacity: 0.6;
 }
 
 .stat {
@@ -3094,7 +3142,8 @@ header .address:after {
   position: relative;
   border-radius: 5px;
   overflow: hidden;
-  height: 660px;
+  height: 60vh;
+  min-height: 400px;
   display: block;
 }
 @media (max-width: 500px) {
@@ -4306,7 +4355,7 @@ header .address:after {
 .interier-slider .play-button:after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 7%;
   top: 0;
   width: 100%;
   z-index: 3;
@@ -4353,7 +4402,7 @@ header .address:after {
 .interier-grid .play-button:after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 7%;
   top: 0;
   width: 100%;
   z-index: 3;
@@ -4417,15 +4466,15 @@ header .address:after {
   text-align: left;
   text-transform: none;
 }
-.seo-text p.padding {
+.seo-text p:nth-of-type(2) {
   padding-left: 40px;
 }
 @media (max-width: 1199px) {
-  .seo-text p.padding {
+  .seo-text p:nth-of-type(2) {
     padding-left: 0;
   }
 }
-.seo-text p.padding span {
+.seo-text p:nth-of-type(2) span {
   font-weight: 600;
 }
 .seo-text ul {
