@@ -14,8 +14,8 @@ $paragraph-height: 1.5;  //line-height
 $paragraph-color: $text-color;
 $list-image: false;  //list.png
 
-$heading-margin: 60, 55 , 30, 25, 25, 25;
-$heading-font-size: 42, 40 , 24 , 20, 18, 16;
+$heading-margin: 60, 60 , 30, 25, 25, 25;
+$heading-font-size: 42, 42 , 24 , 20, 18, 16;
 $heading-font-weight: 600,700,700,600,500,500; // 1 = "normal"(400)
 $heading-uppercase: 1,1,1,1,1,1; // 0 = "none", 1 = "uppercase"
 $heading-text-align: c,c,c,c,c,c; // c = "center", l = "left", r = "right"
@@ -23,12 +23,12 @@ $heading-color: $text-color;
 
 // SM Heading sizes
 $sm-heading-change: true;
-$sm-heading-margin: 50, 40, 35, 30, 20, 15;
-$sm-heading-font-size: 38, 26, 24, 22, 18, 16;
+$sm-heading-margin: 50, 50, 35, 30, 20, 15;
+$sm-heading-font-size: 38, 38, 24, 22, 18, 16;
 // XS Heading sizes
 $xs-heading-change: true;
 $xs-heading-margin: 30, 20, 18, 15, 10, 10;
-$xs-heading-font-size: 28, 26, 24, 22, 20, 18;
+$xs-heading-font-size: 28, 28, 24, 22, 20, 18;
 
 
 $background-color: #fff;

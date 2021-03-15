@@ -27,20 +27,20 @@ block content
             .js-popup__wrapp.success-popup
                 .popup__close.js-popup__close.close-button
                 .popup_container
-                    img(src='../images/success.jpg')
+                    img(loading="lazy" src='../images/success.jpg')
                     .success-wrap
                         h3 СПАСИБО ЗА ЗАЯВКУ
                         .success-text В ближайшее время с вами свяжется оператор для подтверждения заказа. Пожалуйста, включите ваш контактный телефон.
         .container
             include block/breadcrumbs
             .vacancy-body.program-item-body
-                h1 Тайное желание
+                h2 Тайное желание
                 .program-row
                     .left.object-fit
-                        img(src='../images/programs/program0.jpg')
+                        img(loading="lazy" src='../images/programs/program0.jpg')
                     .right
                         .program-info-row
-                            img(src='../images/programs/Vip.png')
+                            img(loading="lazy" src='../images/programs/Vip.png')
                             span 6500 <span>₽</span>
                             span 60 <span>мин</span>
                         .text Эксклюзивная программа с легким шоу, где можно воплотить все свои тайные желания. Реализует все ваши фантазии, и не только. <br><br>ПРОГРАММА СОСТОИТ ИЗ:
@@ -51,12 +51,12 @@ block content
                             li Классика по усиленной технике
                             li Выбор игрушки с двойным релаксом
                         a(href="popup-0").button.js-btn-popup Записаться
-                .h1 Другие программы
+                .h2 Другие программы
                 .master-slider
                     each value,key in ['Тайский боди','Gold','Доминация','Экспресс Lux','Экспресс Lux']
                         .slide
                             a(href="#").program-slide.object-fit
-                                img(src='../images/programs/program' + key + '.jpg')
+                                img(loading="lazy" src='../images/programs/program' + key + '.jpg')
                                 .slide-title
                                     h4 #{value}
         .container
@@ -68,10 +68,10 @@ block content
                                 a(href='#').top
                                 a(href='#').new
                                 a(href='popup-3').play.js-btn-popup
-                            img(src="../images/watermark.png").watermark
+                            img(loading="lazy" src="../images/watermark.png").watermark
                             .address пр-т. Хусаина Ямашева, 17
                             a(href='#').model-image.object-fit
-                                img(src='../images/models/model' + key + '.jpg')
+                                img(loading="lazy" src='../images/models/model' + key + '.jpg')
                             a(href='#').model-info
                                 .model-text
                                     h5  Ангелина, 24

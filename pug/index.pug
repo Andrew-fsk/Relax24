@@ -21,7 +21,7 @@ block content
         .js-popup__wrapp.success-popup
             .popup__close.js-popup__close.close-button
             .popup_container
-                img(src='../images/success.jpg')
+                img(loading="lazy" src='../images/success.jpg')
                 .success-wrap
                     h3 СПАСИБО ЗА ЗАЯВКУ
                     .success-text В ближайшее время с вами свяжется оператор для подтверждения заказа. Пожалуйста, включите ваш контактный телефон.
@@ -64,7 +64,7 @@ block content
                 .popup_container
                     iframe(type='text/html' width='640' height='390' src='http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com' frameborder='0')
         .container
-            .h1 мастера
+            h2 мастера
             .model-grid
                 each val, key in Array(8)
                     if(key !== 0)
@@ -73,10 +73,10 @@ block content
                                 a(href='#').top
                                 a(href='#').new
                                 a(href='popup-3').play.js-btn-popup
-                            img(src="../images/watermark.png").watermark
+                            img(loading="lazy" src="../images/watermark.png").watermark
                             .address пр-т. Хусаина Ямашева, 17
                             a(href='#').model-image.object-fit
-                                img(src='../images/models/model' + key + '.jpg')
+                                img(loading="lazy" src='../images/models/model' + key + '.jpg')
                             a(href='#').model-info
                                 .model-text
                                     h5  Ангелина, 24
@@ -93,7 +93,7 @@ block content
                                 a(href='popup-3').play.js-btn-popup
                             .address.red пр-т. Хусаина Ямашева, 17
                             a(href='#').model-image.object-fit
-                                img(src='../images/svg/no-image.svg')
+                                img(loading="lazy" src='../images/svg/no-image.svg')
                             a(href='#').model-info
                                 .model-text
                                     h5  Ангелина, 24
@@ -110,10 +110,10 @@ block content
                                 a(href='#').top
                                 a(href='#').new
                                 a(href='popup-3').play.js-btn-popup
-                            img(src="../images/watermark.png").watermark
+                            img(loading="lazy" src="../images/watermark.png").watermark
                             .address пр-т. Хусаина Ямашева, 17
                             a(href='#').model-image.object-fit
-                                img(src='../images/models/model' + key + '.jpg')
+                                img(loading="lazy" src='../images/models/model' + key + '.jpg')
                             a(href='#').model-info
                                 .model-text
                                     h5  Ангелина, 24
@@ -130,7 +130,7 @@ block content
                                 a(href='popup-3').play.js-btn-popup
                             .address.red пр-т. Хусаина Ямашева, 17
                             a(href='#').model-image.object-fit
-                                img(src='../images/svg/no-image.svg')
+                                img(loading="lazy" src='../images/svg/no-image.svg')
                             a(href='#').model-info
                                 .model-text
                                     h5  Ангелина, 24
@@ -144,7 +144,7 @@ block content
                     span Смотреть всех
     .container.girl-choose-wrap
         .girl-choose
-            .h1 подобрать девушку
+            h2 подобрать девушку
             .choose-row
                 .choose-text <span>Не нашли мастера?</span> <br> Оставьте заявку, и мы подберем вам по параметрам
                 .choose-text.small Все фото принадлежат нашим девочкам, наслаждайтесь ;)
@@ -154,12 +154,12 @@ block content
             .girl
     .programs-wrap
         .container
-            .h1 Программы
+            h2 Программы
             .program-grid
                 each val, key in ['Прикосновения к прекрасному','Тайский боди','Двойное удовольствие','Искушение','Сладкий персик','Королевство сиам']
                     .program-item
                         a(href="#").program-image.object-fit
-                            img(src='../images/programs/program' + key + '.jpg')
+                            img(loading="lazy" src='../images/programs/program' + key + '.jpg')
                         .program-info
                             h4 #{val}
                             .line.price
@@ -181,7 +181,7 @@ block content
                 each val, key in ['Прикосновения к прекрасному','Тайский боди','Двойное удовольствие','Искушение','Сладкий персик','Королевство сиам']
                     .program-item
                         a(href="#").program-image.object-fit
-                            img(src='../images/programs/program' + key + '.jpg')
+                            img(loading="lazy" src='../images/programs/program' + key + '.jpg')
                         .program-info
                             h4 #{val}
                             .line.price
@@ -204,27 +204,27 @@ block content
                     span Все Программы
     .interier-wrap
         .container
-            .h1 Наш интерьер
+            h2 Наш интерьер
             .interier-text Как далеко вы готовы зайти в своих эротических фантазиях? Даете ли вы волю своим желаниям или существуют ограничения? Мы рады пригласить вас на сеанс эротического массажа, где не существует запретов и все ваши мечты станут реальностью. Круглосуточный график работы салона Relax24 позволит вам в удобное время получить неподдельное удовольствие и массу положительных эмоций по адресу: г. Казань, Просп. А.Камалеева, 34в
             .interier-grid
                 each val, key in Array(4)
                     a(href="popup-2").js-btn-popup.interier-item.object-fit
                         .play-button
-                        img(src='../images/interier/interier' + key + '.jpg')
+                        img(loading="lazy" src='../images/interier/interier' + key + '.jpg')
             .interier-slider
                 each val, key in Array(4)
                     a(href="popup-2").js-btn-popup.interier-item.object-fit
                         .play-button
-                        img(src='../images/interier/interier' + key + '.jpg')
+                        img(loading="lazy" src='../images/interier/interier' + key + '.jpg')
             .bottom-button-wrap.ac-jc
                 a(href='#').button
                     span Все Программы
     .seo-wrap
         .container
             .seo-text
-                h1 О салоне эротического массажа Relax24
+                h2 О салоне эротического массажа Relax24
                 p Как далеко вы готовы зайти в своих эротических фантазиях? Даете ли вы волю своим желаниям или существуют ограничения? Мы рады пригласить вас на сеанс эротического массажа, где не существует запретов и все ваши мечты станут реальностью. Круглосуточный график работы салона Relax24 позволит вам в удобное время получить неподдельное удовольствие и массу положительных эмоций по адресу: г. Казань, Просп. А.Камалеева, 34в
-                p В салоне <strong>Relax24</strong> массажистки обладают не только прекрасными внешними данными, но и в совершенстве владеют восточными и западными техниками. То есть, вы попадете в нежные умелые руки, которые способны избавить вас от усталости и вознести на самый пик блаженства. Подарите себе невероятное эротическое приключение в компании с ослепительной красоткой. Здесь девушки знают, как доставить вам удовольствие, о котором ранее приходилось только мечтать.
+                p В  салоне <strong>Relax24</strong> массажистки обладают не только прекрасными внешними данными, но и в совершенстве владеют восточными и западными техниками. То есть, вы попадете в нежные умелые руки, которые способны избавить вас от усталости и вознести на самый пик блаженства. Подарите себе невероятное эротическое приключение в компании с ослепительной красоткой. Здесь девушки знают, как доставить вам удовольствие, о котором ранее приходилось только мечтать.
                 h5 Наши преимущества
                 p Эротический массаж представляет собой комплекс расслабляющих процедур, которые направлены на максимальное удовлетворение потребностей гостя. Достоинства салона Relax24:
                 ul
@@ -234,7 +234,7 @@ block content
                     li Полная конфиденциальность вашего пребывания.
     .container
         .contact
-            .h1 Контакты
+            h2 Контакты
             .contact-row
                 .column
                     .contact-list

@@ -2798,12 +2798,12 @@ header .address:after {
   box-sizing: border-box;
   box-shadow: 0px 1px 5px #3DAC4B;
 }
-.master-info .left h1 {
+.master-info .left h2 {
   margin-bottom: 0;
   margin-right: 30px;
 }
 @media (max-width: 767px) {
-  .master-info .left h1 {
+  .master-info .left h2 {
     margin-bottom: 25px;
   }
 }
@@ -3462,22 +3462,6 @@ header .address:after {
   border-radius: 5px;
 }
 
-.contact-body {
-  padding-left: 25px;
-  padding-right: 4px;
-}
-@media (max-width: 1024px) {
-  .contact-body {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media (hover: none) and (pointer: coarse) {
-  .contact-body {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
 .contact-body h3 {
   text-shadow: 0 2px 7px #ff0068;
 }
@@ -5198,7 +5182,7 @@ footer:before {
 .vip-programs .program-page-grid {
   margin-bottom: 0;
 }
-.vip-programs .h1 {
+.vip-programs .h2 {
   position: relative;
   z-index: 4;
 }
@@ -5241,7 +5225,7 @@ footer:before {
   padding: 30px 0;
   position: relative;
 }
-.premium-programs .h1 {
+.premium-programs .h2 {
   position: relative;
   z-index: 4;
 }

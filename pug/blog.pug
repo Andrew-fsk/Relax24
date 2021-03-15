@@ -10,11 +10,11 @@ block content
         .container
             include block/breadcrumbs
             .vacancy-body.blog-body
-                h1 Блог об эротическом массаже
+                h2 Блог об эротическом массаже
                 each value, key in ['Массаж для мужчин с выездом: отдых, о котором мечтает каждый!','Эротический массаж на выезд — закажи удовольствие на дом!','Массаж фут-фетиш — удовольствие без границ!']
                     .blog-item
                         a(href='#').blog-image.object-fit
-                            img(src='../images/blog/blog (' + key + ').jpg')
+                            img(loading="lazy" src='../images/blog/blog (' + key + ').jpg')
                         .blog-info
                             a(href="#").title #{value}
                             .date 2021.02.15 в 14:23
@@ -30,10 +30,10 @@ block content
                                 a(href='#').top
                                 a(href='#').new
                                 a(href='popup-3').play.js-btn-popup
-                            img(src="../images/watermark.png").watermark
+                            img(loading="lazy" src="../images/watermark.png").watermark
                             .address пр-т. Хусаина Ямашева, 17
                             a(href='#').model-image.object-fit
-                                img(src='../images/models/model' + key + '.jpg')
+                                img(loading="lazy" src='../images/models/model' + key + '.jpg')
                             a(href='#').model-info
                                 .model-text
                                     h5  Ангелина, 24
