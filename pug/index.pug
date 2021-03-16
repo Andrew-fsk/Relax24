@@ -29,7 +29,7 @@ block content
         .js-popup__wrapp.success-popup.video-popup
             .popup__close.js-popup__close.close-button
             .popup_container
-                iframe(type='text/html' width='640' height='390' src='http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com' frameborder='0')
+                iframe(type='text/html' width='640' height='390' src='http://www.youtube.com/embed/M7lc1UVf-VE?origin=http://example.com' frameborder='0')
     .banner-wrap
         .container
             .banner
@@ -62,7 +62,7 @@ block content
             .js-popup__wrapp.success-popup.video-popup
                 .popup__close.js-popup__close.close-button
                 .popup_container
-                    iframe(type='text/html' width='640' height='390' src='http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com' frameborder='0')
+                    iframe(type='text/html' width='640' height='390' src='http://www.youtube.com/embed/M7lc1UVf-VE?origin=http://example.com' frameborder='0')
         .container
             h2 мастера
             .model-grid
@@ -74,7 +74,7 @@ block content
                                 a(href='#').new
                                 a(href='popup-3').play.js-btn-popup
                             img(loading="lazy" src="../images/watermark.png").watermark
-                            .address пр-т. Хусаина Ямашева, 17
+                            .address.red
                             a(href='#').model-image.object-fit
                                 img(loading="lazy" src='../images/models/model' + key + '.jpg')
                             a(href='#').model-info
@@ -91,7 +91,7 @@ block content
                                 a(href='#').top
                                 a(href='#').new
                                 a(href='popup-3').play.js-btn-popup
-                            .address.red пр-т. Хусаина Ямашева, 17
+                            .address.online пр-т. Хусаина Ямашева, 17
                             a(href='#').model-image.object-fit
                                 img(loading="lazy" src='../images/svg/no-image.svg')
                             a(href='#').model-info
@@ -205,7 +205,7 @@ block content
     .interier-wrap
         .container
             h2 Наш интерьер
-            .interier-text Как далеко вы готовы зайти в своих эротических фантазиях? Даете ли вы волю своим желаниям или существуют ограничения? Мы рады пригласить вас на сеанс эротического массажа, где не существует запретов и все ваши мечты станут реальностью. Круглосуточный график работы салона Relax24 позволит вам в удобное время получить неподдельное удовольствие и массу положительных эмоций по адресу: г. Казань, Просп. А.Камалеева, 34в
+            .interier-text Как далеко вы готовы зайти в своих эротических фантазиях? Даете ли вы волю своим желаниям или существуют ограничения? Мы рады пригласить вас на сеанс эротического массажа, где не существует запретов и все ваши мечты станут реальностью. Круглосуточный график работы салона <strong>Relax24</strong> позволит вам в удобное время получить неподдельное удовольствие и массу положительных эмоций по адресу: г. Казань, Просп. А.Камалеева, 34в
             .interier-grid
                 each val, key in Array(4)
                     a(href="popup-2").js-btn-popup.interier-item.object-fit
@@ -223,10 +223,10 @@ block content
         .container
             .seo-text
                 h2 О салоне эротического массажа Relax24
-                p Как далеко вы готовы зайти в своих эротических фантазиях? Даете ли вы волю своим желаниям или существуют ограничения? Мы рады пригласить вас на сеанс эротического массажа, где не существует запретов и все ваши мечты станут реальностью. Круглосуточный график работы салона Relax24 позволит вам в удобное время получить неподдельное удовольствие и массу положительных эмоций по адресу: г. Казань, Просп. А.Камалеева, 34в
+                p Как далеко вы готовы зайти в своих эротических фантазиях? Даете ли вы волю своим желаниям или существуют ограничения? Мы рады пригласить вас на сеанс эротического массажа, где не существует запретов и все ваши мечты станут реальностью. Круглосуточный график работы салона <strong>Relax24</strong> позволит вам в удобное время получить неподдельное удовольствие и массу положительных эмоций по адресу: г. Казань, Просп. А.Камалеева, 34в
                 p В  салоне <strong>Relax24</strong> массажистки обладают не только прекрасными внешними данными, но и в совершенстве владеют восточными и западными техниками. То есть, вы попадете в нежные умелые руки, которые способны избавить вас от усталости и вознести на самый пик блаженства. Подарите себе невероятное эротическое приключение в компании с ослепительной красоткой. Здесь девушки знают, как доставить вам удовольствие, о котором ранее приходилось только мечтать.
                 h5 Наши преимущества
-                p Эротический массаж представляет собой комплекс расслабляющих процедур, которые направлены на максимальное удовлетворение потребностей гостя. Достоинства салона Relax24:
+                p Эротический массаж представляет собой комплекс расслабляющих процедур, которые направлены на максимальное удовлетворение потребностей гостя. Достоинства салона <strong>Relax24</strong>:
                 ul
                     li Приглушенный свет, расслабляющая музыка, возбуждающие ароматы;
                     li Профессиональные массажистки, обладающие приятными внешними данными;
@@ -262,7 +262,7 @@ block content
                             .validation-field.error
                                 .placeholder Имя
                                 input(type='text' name='name')
-                            .validation-field
+                            .validation-field.phone-input
                                 .placeholder Телефон
                                 input(type='text' placeholder='+7 () - -' name='phone')
                             .ac-jc

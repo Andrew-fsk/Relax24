@@ -13,13 +13,14 @@
   overflow: hidden;
   padding-top: 40px;
   padding-left: 95px;
+  padding-right: 95px;
   @include breakpoint(xs) {
     padding-left: 15px;
     padding-top: 30px;
     padding-right: 15px;
   }
 
-  .h1 {
+  h2 {
     position: relative;
     z-index: 2;
   }
@@ -44,19 +45,23 @@
       &:first-of-type {
         margin-right: 30px;
         max-width: 350px;
+        line-height: 28px;
         @include breakpoint(xs) {
           max-width: 100%;
           margin-right: 0;
           margin-bottom: 10px;
           text-align: center;
+          line-height: initial;
         }
       }
 
       span {
         font-size: 30px;
         text-transform: uppercase;
+        line-height: 36px;
         @include breakpoint(xs) {
           font-size: 22px;
+          line-height: initial;
         }
       }
 
@@ -115,7 +120,7 @@
   .program-image {
     position: relative;
     overflow: hidden;
-    height: 350px;
+    height: auto;
     width: 40%;
     display: block;
     &:after{
@@ -587,6 +592,8 @@
     margin-bottom: 3px;
     padding: 5px 15px;
     @include flexbox;
+    cursor: pointer;
+    transition: all .2s;
     @include justify-content(space-between);
     @include breakpoint(mxs){
       @include flex-direction(column);

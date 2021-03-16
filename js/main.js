@@ -171,6 +171,13 @@ $(document).ready(function () {
                 }, 1200);
             }
         }
+        return false;
+    })
+
+    $('.contact .contact-item').on('click touchend', function () {
+        $('.contact .contact-item').removeClass('active');
+        $(this).addClass('active');
+        return false;
     })
 
     $('.footer-top .logo').on('click touchend', function () {
@@ -308,6 +315,29 @@ $(window).resize(function () {
     setPopup();
     setWrap();
 });
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > $(this).height() - $('header').height()) {
+        $(".to-up").css({
+            bottom: "4%",
+            opacity: 1,
+        });
+    } else {
+        $(".to-up").css({
+            bottom: "-50%",
+        });
+    }
+});
+$(".to-up").on("click", function () {
+    $("html, body").animate(
+        {
+            scrollTop: 0,
+        },
+        1000
+    );
+    return false;
+});
+
 
 function openPopup(id) {
     $(".js-popup[data-id-popup='" + id + "']").fadeIn(300);

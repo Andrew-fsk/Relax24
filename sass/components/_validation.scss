@@ -10,6 +10,14 @@
       border: 1px solid #FB0169;
     }
   }
+  &.phone-input{
+    input{
+      background-color: #B9B9B9;
+      &::placeholder {
+        color: #000000;
+      }
+    }
+  }
   input{
     height: 40px;
     border-radius: 20px;
