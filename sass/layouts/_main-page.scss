@@ -114,15 +114,16 @@
   @include flexbox;
   margin: 0 -15px;
   @include flex-wrap(wrap);
-  @include breakpoint(sm-down){
-    display: none;
-  }
   .program-image {
     position: relative;
     overflow: hidden;
     height: auto;
     width: 40%;
     display: block;
+    @include breakpoint(smxs){
+      height: 300px;
+      width: 100%;
+    }
     &:after{
       content: '';
       position: absolute;
@@ -142,7 +143,12 @@
     @include justify-content(space-between);
     @include align-items(flex-start);
     padding: 20px 20px 20px 15px;
-
+    @include breakpoint(smxs){
+      width: 100%;
+      .button{
+        margin: auto;
+      }
+    }
     h4 {
       text-align: left;
       height: 40px;
@@ -214,7 +220,13 @@
     box-sizing: border-box;
     border-radius: 8px;
     transition: all .2s;
+    @include breakpoint(sm-down){
+      width: calc(100% - 30px);
 
+    }
+    @include breakpoint(smxs){
+      @include flex-wrap(wrap);
+    }
     &:hover {
       border: 1px solid #FB0169;
       box-shadow: 0px 2px 7px #FF0068;

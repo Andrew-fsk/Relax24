@@ -2275,16 +2275,10 @@ header .address:after {
   .master-on-main {
     padding-bottom: 0;
   }
-  .master-on-main .model-grid {
-    display: none;
-  }
 }
 @media (hover: none) and (pointer: coarse) {
   .master-on-main {
     padding-bottom: 0;
-  }
-  .master-on-main .model-grid {
-    display: none;
   }
 }
 
@@ -2300,16 +2294,6 @@ header .address:after {
   flex-wrap: wrap;
   margin: 0 -15px;
 }
-@media (max-width: 1024px) {
-  .model-grid {
-    margin: 0;
-  }
-}
-@media (hover: none) and (pointer: coarse) {
-  .model-grid {
-    margin: 0;
-  }
-}
 .model-grid .model-item {
   position: relative;
   overflow: hidden;
@@ -2318,6 +2302,21 @@ header .address:after {
   height: 385px;
   transition: all 0.2s;
   border: 1px solid transparent;
+}
+@media (max-width: 1024px) {
+  .model-grid .model-item {
+    width: calc(50% - 30px);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .model-grid .model-item {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 600px) {
+  .model-grid .model-item {
+    width: calc(100% - 30px);
+  }
 }
 .model-grid .model-item:hover {
   border: 1px solid #FB0169;
@@ -4044,22 +4043,18 @@ header .address:after {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-@media (max-width: 1024px) {
-  .program-grid {
-    display: none;
-  }
-}
-@media (hover: none) and (pointer: coarse) {
-  .program-grid {
-    display: none;
-  }
-}
 .program-grid .program-image {
   position: relative;
   overflow: hidden;
   height: auto;
   width: 40%;
   display: block;
+}
+@media (max-width: 500px) {
+  .program-grid .program-image {
+    height: 300px;
+    width: 100%;
+  }
 }
 .program-grid .program-image:after {
   content: "";
@@ -4092,6 +4087,14 @@ header .address:after {
   -ms-align-items: flex-start;
   align-items: flex-start;
   padding: 20px 20px 20px 15px;
+}
+@media (max-width: 500px) {
+  .program-grid .program-info {
+    width: 100%;
+  }
+  .program-grid .program-info .button {
+    margin: auto;
+  }
 }
 .program-grid .program-info h4 {
   text-align: left;
@@ -4164,6 +4167,24 @@ header .address:after {
   box-sizing: border-box;
   border-radius: 8px;
   transition: all 0.2s;
+}
+@media (max-width: 1024px) {
+  .program-grid .program-item {
+    width: calc(100% - 30px);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .program-grid .program-item {
+    width: calc(100% - 30px);
+  }
+}
+@media (max-width: 500px) {
+  .program-grid .program-item {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
 }
 .program-grid .program-item:hover {
   border: 1px solid #FB0169;

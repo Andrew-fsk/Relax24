@@ -4,9 +4,6 @@
   background: linear-gradient(180deg, #000000 7.32%, rgba(0, 0, 0, 0) 45.32%);
   @include breakpoint(sm-down) {
     padding-bottom: 0;
-    .model-grid {
-      display: none;
-    }
   }
 }
 
@@ -14,9 +11,6 @@
   @include flexbox;
   @include flex-wrap(wrap);
   margin: 0 -15px;
-  @include breakpoint(sm-down) {
-    margin: 0;
-  }
 
   .model-item {
     position: relative;
@@ -26,6 +20,12 @@
     height: 385px;
     transition: all .2s;
     border: 1px solid transparent;
+    @include breakpoint(sm-down){
+      width: calc(50% - 30px);
+    }
+    @include breakpoint(mxs){
+      width: calc(100% - 30px);
+    }
     &:hover{
       border: 1px solid #FB0169;
       box-shadow: 0px 2px 7px #FF0068;
